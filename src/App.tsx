@@ -324,7 +324,9 @@ function App() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <item.icon className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative z-10">{item.name}</span>
+                  <span className={`relative z-10 transition-all duration-500 ${scrollY > 50 ? 'text-sm' : 'text-base'}`}>
+  {item.name}
+</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 transition-all duration-500 group-hover:w-full"></span>
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 rounded-lg transform scale-110"></span>
                 </button>
