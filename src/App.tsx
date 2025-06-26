@@ -1052,6 +1052,11 @@ function App() {
         }
       `}</style>
     </div>
+        </>
+        }
+      />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+    </Routes>
   );
 }
 
