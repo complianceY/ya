@@ -834,9 +834,9 @@ function App() {
             >
               <form className="space-y-6">
                 {[
-  { id: "yourName", label: "Your Name", type: "text", placeholder: "Enter your name" },
-  { id: "phone", label: "Phone Number", type: "tel", placeholder: "Enter your phone number" },
-  { id: "company", label: "Company/Hospital Name", type: "text", placeholder: "Enter your organization name" }
+  { id: "yourName", label: "Your Name", type: "text", placeholder: "Enter your name", required: true },
+  { id: "phone", label: "Phone Number", type: "tel", placeholder: "Enter your phone number", required: true },
+  { id: "company", label: "Company/Hospital Name", type: "text", placeholder: "Enter your organization name", required: true }
 ].map((field, index) => (
                   <div key={field.id} style={{ animationDelay: `${index * 150}ms` }}>
                     <label htmlFor={field.id} className="block text-sm font-medium text-white mb-2">
