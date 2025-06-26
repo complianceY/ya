@@ -293,11 +293,22 @@ function App() {
           backgroundColor: scrollY > 50 ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.8)',
           backdropFilter: 'blur(20px) saturate(180%)',
           borderBottom: scrollY > 50 ? '1px solid rgba(229, 231, 235, 0.5)' : 'none',
-          transform: `translateY(${scrollY > 100 ? '-2px' : '0px'}) scaleX(${scrollY > 50 ? '0.85' : '1'})`,
-          borderRadius: scrollY > 50 ? '20px' : '0px',
+          
           boxShadow: scrollY > 50 ? '0 25px 50px rgba(0, 0, 0, 0.15)' : 'none'
         }}
       >
+        <div
+    className="w-full relative mx-auto transition-all duration-700 ease-out"
+    style={{
+      transform: `translateY(${scrollY > 100 ? '-2px' : '0px'}) scaleX(${scrollY > 50 ? '0.85' : '1'})`,
+      borderRadius: scrollY > 50 ? '20px' : '0px',
+      maxWidth: scrollY > 50 ? 'calc(100% - 40px)' : '100%', // Add this line
+      boxShadow: scrollY > 50 ? '0 10px 30px rgba(0, 0, 0, 0.1)' : 'none', // Optional: Smaller shadow for inner bar
+      backgroundColor: scrollY > 50 ? 'rgba(255, 255, 255, 0.95)' : 'transparent', // Make it transparent when not scrolled
+      backdropFilter: scrollY > 50 ? 'blur(20px) saturate(180%)' : 'none', // Add backdrop filter here
+      border: scrollY > 50 ? '1px solid rgba(229, 231, 235, 0.5)' : 'none', // Add border here
+    }}
+  >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3 group cursor-pointer">
