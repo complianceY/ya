@@ -713,10 +713,6 @@ function App() {
                     {service.description}
                   </p>
                   
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors duration-300">
-                    Learn More
-                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-3 transition-transform duration-300" />
-                  </div>
                 </div>
                 
                 {/* Advanced hover effect */}
