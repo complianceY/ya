@@ -480,15 +480,14 @@ function App() {
                   {/* Larger floating particles around text */}
                   {isHovering && [...Array(8)].map((_, i) => (
                     <div
-                      key={i}
-                      className="absolute w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-70 animate-ping"
-                      style={{
-                        left: `${10 + Math.random() * 80}%`,
-                        top: `${10 + Math.random() * 80}%`,
-                        animationDelay: `${i * 300}ms`,
-                        animationDuration: `${1.8 + Math.random() * 1.5}s`
-                      }}
-                    ></div>
+    key={i}
+    className="absolute w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-50 animate-bubble-slow"
+    style={{
+      left: `${10 + Math.random() * 80}%`,
+      top: `${10 + Math.random() * 80}%`,
+      animationDelay: `${i * 300}ms`
+    }}
+  ></div>
                   ))}
                 </span>
               </div>
