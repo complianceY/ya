@@ -309,7 +309,7 @@ function App() {
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
                 <img 
-                  src="/New_Logo_MK.png" 
+                  src="/MK_Logo_WOB.png" 
                   alt="MediKloud Logo" 
                   className={`transition-all duration-500 group-hover:scale-125 ${scrollY > 50 ? 'h-8' : 'h-10'}`} 
                 />
