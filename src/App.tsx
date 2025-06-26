@@ -853,7 +853,7 @@ function App() {
                 
                 <div style={{ animationDelay: '450ms' }}>
                   <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                    Tell us about your pharmacy needs
+                    Your Message
                   </label>
                   <textarea 
                     id="message" 
