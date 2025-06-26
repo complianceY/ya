@@ -485,7 +485,7 @@ function App() {
                       style={{
                         left: `${10 + Math.random() * 80}%`,
                         top: `${10 + Math.random() * 80}%`,
-                        animationDelay: `${i * 250}ms`,
+                        animationDelay: `${i * 300}ms`,
                         animationDuration: `${1.8 + Math.random() * 1.5}s`
                       }}
                     ></div>
