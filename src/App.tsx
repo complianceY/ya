@@ -312,7 +312,7 @@ function App() {
             </div>
             
             {/* Desktop Navigation with Professional Menu Items */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className={`hidden md:flex items-center transition-all duration-500 ${scrollY > 50 ? 'space-x-4' : 'space-x-8'}`}>
               {[
                 { name: 'Solutions', icon: Building2, target: 'delivery' },
                 { name: 'Services', icon: Layers, target: 'Services' },
