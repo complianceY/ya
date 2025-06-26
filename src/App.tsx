@@ -467,7 +467,7 @@ function App() {
                   
                   {/* Enhanced background glow - larger and more visible */}
                   <div 
-                    className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-cyan-400/20 to-teal-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-lg"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-cyan-400/20 to-teal-400/10 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-lg"
                     style={{
                       transform: `scale(${1.3 + Math.sin(glowIntensity * 0.05) * 0.1})`,
                       top: '-20%',
