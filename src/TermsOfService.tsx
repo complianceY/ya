@@ -17,6 +17,13 @@ const Header = () => (
   </nav>
 );
 
+const Section = ({ title, children }) => (
+  <section className="mb-8">
+    <h2 className="text-2xl font-bold mt-8 mb-4 text-blue-700">{title}</h2>
+    {children}
+  </section>
+);
+
 const TermsOfService = () => (
   <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 text-gray-800 pb-16">
     <Header />
@@ -25,162 +32,411 @@ const TermsOfService = () => (
         <h1 className="text-4xl font-bold mb-6 text-blue-700">Terms of Use</h1>
         <p className="mb-2 font-semibold">Last updated June 26, 2025</p>
         <div className="prose prose-blue max-w-none">
-          <h2>Agreement to Our Legal Terms</h2>
-          <p>We are Klinikmed Technologies Private Limited, doing business as Medikloud ("Company", "we", "us", or "our"), a company registered in India at:<br/>11-1-18b, Putchala Street, Vizianagaram, Andhra Pradesh 535002.</p>
-          <p>We operate:</p>
-          <ul>
-            <li>The website: <a href="https://joyful-tapioca-aa63bc.netlify.app" className="text-blue-600 underline">https://joyful-tapioca-aa63bc.netlify.app</a> (the “Site”)</li>
-            <li>The mobile application: Medikloud-mobile (the “App”)</li>
-            <li>Any other related products and services that refer or link to these legal terms (the “Legal Terms”)</li>
-          </ul>
-          <p>(Collectively, the “Services”)</p>
-          <p>You can contact us by:</p>
-          <ul>
-            <li>Phone: (+91) 7702670993</li>
-            <li>Email: <a href="mailto:hello@medikloud.coom" className="text-blue-600 underline">hello@medikloud.coom</a></li>
-            <li>Mail: Startup Village, Chandrampalem, Pedda Rushikonda, Madhurawada, Visakhapatnam, Andhra Pradesh 530048, India</li>
-          </ul>
-          <p>These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”), and Klinikmed Technologies Private Limited, concerning your access to and use of the Services. By accessing the Services, you acknowledge that you have read, understood, and agreed to be bound by all of these Legal Terms.</p>
-          <p className="font-bold text-red-600">IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</p>
-          <h2>Table of Contents</h2>
-          <ol className="list-decimal pl-6">
-            <li>Our Services</li>
-            <li>Intellectual Property Rights</li>
-            <li>User Representations</li>
-            <li>User Registration</li>
-            <li>Products</li>
-            <li>Purchases and Payment</li>
-            <li>Subscriptions</li>
-            <li>Return/Refunds Policy</li>
-            <li>Software</li>
-            <li>Prohibited Activities</li>
-            <li>User Generated Contributions</li>
-            <li>Contribution Licence</li>
-            <li>Mobile Application Licence</li>
-            <li>Social Media</li>
-            <li>Third-Party Websites and Content</li>
-            <li>Services Management</li>
-            <li>Privacy Policy</li>
-            <li>Term and Termination</li>
-            <li>Modifications and Interruptions</li>
-            <li>Governing Law</li>
-            <li>Dispute Resolution</li>
-            <li>Corrections</li>
-            <li>Disclaimer</li>
-            <li>Limitations of Liability</li>
-            <li>Indemnification</li>
-            <li>User Data</li>
-            <li>Electronic Communications, Transactions, and Signatures</li>
-            <li>SMS Text Messaging</li>
-            <li>Miscellaneous</li>
-            <li>Contact Us</li>
-          </ol>
-          <h2>1. Our Services</h2>
-          <p>We provide a platform that allows users to access and use various health-related services, including but not limited to telemedicine consultations, health tracking, and management of health records (the "Services").</p>
-          <p>To use our Services, you must register for an account and provide certain information about yourself. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.</p>
-          <h2>2. Intellectual Property Rights</h2>
-          <p>The Services and their original content, features, and functionality are owned by Klinikmed Technologies Private Limited and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
-          <p>These Terms do not grant you any rights to use the Company’s name or any of the Company’s trademarks, logos, domain names, and other distinctive brand features.</p>
-          <h2>3. User Representations</h2>
-          <p>By using the Services, you represent and warrant that:</p>
-          <ul>
-            <li>You are at least 18 years of age or the age of majority in your jurisdiction, and you have the legal capacity to enter into these Terms.</li>
-            <li>You will comply with all applicable laws, regulations, and ordinances in connection with your use of the Services.</li>
-            <li>You have not been previously suspended or removed from the Services.</li>
-            <li>Your use of the Services will be in compliance with these Terms and all applicable laws, rules, and regulations.</li>
-          </ul>
-          <h2>4. User Registration</h2>
-          <p>To access certain features of the Services, you may be required to create an account. You are responsible for maintaining the confidentiality of your account information, including your password, and for all activities that occur under your account.</p>
-          <p>If you become aware of any unauthorized use of your account or any other breach of security, you agree to notify us immediately. We will not be liable for any loss or damage arising from your failure to comply with this section.</p>
-          <h2>5. Products</h2>
-          <p>We may offer products for sale through the Services. All descriptions, images, references, features, content, specifications, products, and prices of products described or depicted on the Services are subject to change at any time without notice.</p>
-          <p>We reserve the right to discontinue any product at any time. The inclusion of any product on the Services at a particular time does not imply or warrant that the product will be available at any time. We are not liable to you or any third party by reason of our withdrawing any product from the Services.</p>
-          <h2>6. Purchases and Payment</h2>
-          <p>All purchases made through the Services are subject to our payment processing terms and conditions. You agree to provide accurate and complete payment information and to pay all fees and charges incurred in connection with your purchases.</p>
-          <p>We reserve the right to change our prices and billing methods at any time. If we do, we will provide you with notice of such changes. Your continued use of the Services after the posting of changes constitutes your binding acceptance of such changes.</p>
-          <h2>7. Subscriptions</h2>
-          <p>Some parts of the Services may be available only on a subscription basis. By subscribing to the Services, you agree to pay the applicable subscription fees and to comply with any additional terms and conditions associated with your subscription.</p>
-          <p>We reserve the right to modify or discontinue, temporarily or permanently, any subscription-based service with or without notice. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services.</p>
-          <h2>8. Return/Refunds Policy</h2>
-          <p>We want you to be satisfied with your purchase. If you are not satisfied, please contact us within 7 days of receiving your order to request a refund or exchange. To be eligible for a return, your item must be unused and in the same condition that you received it.</p>
-          <p>Some products may be non-refundable or have different return conditions as specified at the time of purchase. We reserve the right to refuse returns or exchanges that do not meet our return policy requirements.</p>
-          <h2>9. Software</h2>
-          <p>Some parts of the Services may require you to download software or applications. We grant you a limited, non-exclusive, non-transferable license to use the software solely in connection with the Services.</p>
-          <p>You may not: (a) decompile, reverse engineer, disassemble, attempt to derive the source code of, or decrypt any software; (b) use the software for any purpose that is illegal or prohibited by these Terms; (c) distribute, sell, lease, or sublicense the software to any third party.</p>
-          <h2>10. Prohibited Activities</h2>
-          <p>You agree not to engage in any of the following prohibited activities:</p>
-          <ul>
-            <li>Using the Services for any illegal purpose or in violation of any local, state, national, or international law.</li>
-            <li>Attempting to gain unauthorized access to the Services, other user accounts, or computer systems or networks connected to the Services.</li>
-            <li>Interfering with or disrupting the security, integrity, or performance of the Services.</li>
-            <li>Transmitting any viruses, malware, or other harmful computer code through the Services.</li>
-            <li>Engaging in any other conduct that restricts or inhibits anyone's use or enjoyment of the Services, or which, as determined by us, may harm Medikloud or users of the Services or expose them to liability.</li>
-          </ul>
-          <h2>11. User Generated Contributions</h2>
-          <p>The Services may contain features that allow users to submit, post, or otherwise make available content, including but not limited to text, images, audio, and video ("User Generated Contributions").</p>
-          <p>By making any User Generated Contributions, you grant us a worldwide, non-exclusive, royalty-free, perpetual, and irrevocable license to use, reproduce, modify, publish, distribute, and display such User Generated Contributions in any media.</p>
-          <p>You represent and warrant that: (a) you own or control all rights in and to the User Generated Contributions and have the right to grant the license granted above; (b) all of your User Generated Contributions do and will comply with these Terms.</p>
-          <h2>12. Contribution Licence</h2>
-          <p>By submitting any User Generated Contributions, you grant us a license to use, reproduce, modify, publish, and distribute such contributions as part of the Services.</p>
-          <p>You also grant each user of the Services a non-exclusive, royalty-free, perpetual license to access your User Generated Contributions through the Services, and to use, reproduce, modify, publish, and distribute such contributions for personal, non-commercial purposes.</p>
-          <h2>13. Mobile Application Licence</h2>
-          <p>If you access the Services through a mobile application, we grant you a limited, non-exclusive, non-transferable license to download, install, and use the mobile application on a compatible mobile device owned or controlled by you.</p>
-          <p>You may not: (a) decompile, reverse engineer, disassemble, attempt to derive the source code of, or decrypt the mobile application; (b) use the mobile application for any purpose that is illegal or prohibited by these Terms; (c) distribute, sell, lease, or sublicense the mobile application to any third party.</p>
-          <h2>14. Social Media</h2>
-          <p>We may use social media platforms to promote our Services and engage with users. Your use of social media in connection with the Services is subject to these Terms and any additional terms and conditions applicable to the social media platform.</p>
-          <p>We do not endorse, and are not responsible or liable for, any third-party content, advertising, products, or other materials on or available from such platforms.</p>
-          <h2>15. Third-Party Websites and Content</h2>
-          <p>The Services may contain links to third-party websites or resources. We are not responsible or liable for the availability or accuracy of such websites or resources, or for the content, products, or services available on or through such websites or resources.</p>
-          <p>Links to such websites or resources do not imply any endorsement by Medikloud of such websites or resources or the content, products, or services available on or through such websites or resources.</p>
-          <h2>16. Services Management</h2>
-          <p>We reserve the right, but not the obligation, to monitor, review, and remove or disable access to any User Generated Contributions or other content that we consider violates these Terms or is otherwise harmful or objectionable.</p>
-          <p>We also reserve the right to manage, regulate, modify, or eliminate any aspect of the Services, including but not limited to the availability of any features, database, or content, at our sole discretion.</p>
-          <h2>17. Privacy Policy</h2>
-          <p>Your privacy is important to us. Please review our Privacy Policy, which explains how we collect, use, and protect your information. By using our Services, you consent to our collection and use of your information as described in the Privacy Policy.</p>
-          <h2>18. Term and Termination</h2>
-          <p>These Terms are effective as of the date you first access or use the Services and will remain in effect until terminated by you or us.</p>
-          <p>You may terminate these Terms at any time by discontinuing your use of the Services and deleting your account, if applicable.</p>
-          <p>We may terminate or suspend your access to the Services, without prior notice or liability, for any reason whatsoever, including, without limitation, if you breach these Terms.</p>
-          <h2>19. Modifications and Interruptions</h2>
-          <p>We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice.</p>
-          <p>We also reserve the right to interrupt or suspend all or part of the Services, or to modify, suspend, or terminate your access to the Services, for any reason, at any time, without notice.</p>
-          <h2>20. Governing Law</h2>
-          <p>These Terms and your use of the Services are governed by and construed in accordance with the laws of the State of [Your State], without regard to its conflict of law principles.</p>
-          <p>You agree to submit to the personal jurisdiction of the state and federal courts located in [Your County/City, Your State] for the resolution of any disputes arising out of or relating to these Terms or your use of the Services.</p>
-          <h2>21. Dispute Resolution</h2>
-          <p>Any dispute, claim, or controversy arising out of or relating to these Terms or the Services shall be resolved by binding arbitration in accordance with the rules of the Indian Arbitration and Conciliation Act, 1996.</p>
-          <p>The arbitration shall be conducted in [Your City, Your State] by a single arbitrator appointed by the parties or, failing agreement, by the Indian Council of Arbitration.</p>
-          <p>The language of the arbitration shall be English. The award of the arbitrator shall be final and binding on the parties.</p>
-          <h2>22. Corrections</h2>
-          <p>There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information.</p>
-          <p>We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information at any time without prior notice.</p>
-          <h2>23. Disclaimer</h2>
-          <p>The Services are provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.</p>
-          <p>Medikloud, its subsidiaries, affiliates, and its licensors do not warrant that:</p>
-          <ul>
-            <li>The Services will function uninterrupted, secure, or available at any particular time or location.</li>
-            <li>Any errors or defects will be corrected.</li>
-            <li>The Services are free of viruses or other harmful components.</li>
-            <li>Any content or information you obtain through the Services will be accurate, reliable, or suitable for your particular purpose.</li>
-          </ul>
-          <h2>24. Limitations of Liability</h2>
-          <p>To the fullest extent permitted by applicable law, in no event shall Medikloud, its affiliates, licensors, or service providers, or their respective directors, officers, employees, agents, contractors, successors, or assigns be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, arising out of or in connection with your access to or use of, or inability to access or use, the Services, any content on the Services, or any services or items obtained through the Services, whether based on warranty, contract, tort (including negligence), or any other legal theory, whether or not we have been informed of the possibility of such damage.</p>
-          <h2>25. Indemnification</h2>
-          <p>You agree to defend, indemnify, and hold harmless Medikloud, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, agents, contractors, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Services, including, but not limited to, any use of the Services' content, services, and products other than as expressly authorized in these Terms or your use of any information obtained from the Services.</p>
-          <h2>26. User Data</h2>
-          <p>We will maintain the confidentiality of all personal information and data that you provide in connection with your use of the Services in accordance with our Privacy Policy.</p>
-          <p>You are responsible for maintaining the confidentiality of your account information, including your password, and for all activities that occur under your account. If you suspect any unauthorized use of your account, you must notify us immediately.</p>
-          <h2>27. Electronic Communications, Transactions, and Signatures</h2>
-          <p>Visiting the Services, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications and you agree that all agreements, notices, disclosures, and other communications that we provide to you electronically, via email and on the Services, satisfy any legal requirement that such communications be in writing.</p>
-          <p>YOU HEREBY AGREE TO THE USE OF ELECTRONIC SIGNATURES, CONTRACTS, ORDERS, AND OTHER RECORDS AND TO ELECTRONIC DELIVERY OF NOTICES, POLICIES, AND RECORDS OF TRANSACTIONS INITIATED OR COMPLETED BY US OR VIA THE SERVICES.</p>
-          <h2>28. SMS Text Messaging</h2>
-          <p>We may send you SMS text messages relating to your use of the Services, including but not limited to account verification, order updates, and promotional messages.</p>
-          <p>You can opt-out of receiving SMS text messages at any time by following the instructions provided in the messages or by contacting us.</p>
-          <h2>29. Miscellaneous</h2>
-          <p>These Terms constitute the entire agreement between you and Medikloud regarding your use of the Services, superseding any prior agreements between you and Medikloud relating to your use of the Services.</p>
-          <p>If any provision of these Terms is held to be invalid or unenforceable by a court of competent jurisdiction, such provision shall be struck and the remaining provisions shall be enforced to the fullest extent possible, reflecting the original intent of the parties.</p>
-          <p>The failure of Medikloud to enforce any right or provision of these Terms will not be deemed a waiver of such right or provision.</p>
-          <p>For any questions about these Terms, please contact us at <a href="mailto:hello@medikloud.coom" className="text-blue-600 underline">hello@medikloud.coom</a>.</p>
+          <Section title="Agreement to Our Legal Terms">
+            <p>We are Klinikmed Technologies Private Limited, doing business as Medikloud ("Company", "we", "us", or "our"), a company registered in India at:<br/>11-1-18b, Putchala Street, Vizianagaram, Andhra Pradesh 535002.</p>
+            <p>We operate:</p>
+            <ul>
+              <li>The website: <a href="https://joyful-tapioca-aa63bc.netlify.app" className="text-blue-600 underline">https://joyful-tapioca-aa63bc.netlify.app</a> (the “Site”)</li>
+              <li>The mobile application: Medikloud-mobile (the “App”)</li>
+              <li>Any other related products and services that refer or link to these legal terms (the “Legal Terms”)</li>
+            </ul>
+            <p>(Collectively, the “Services”)</p>
+            <p>You can contact us by:</p>
+            <ul>
+              <li>Phone: (+91) 7702670993</li>
+              <li>Email: <a href="mailto:hello@medikloud.coom" className="text-blue-600 underline">hello@medikloud.coom</a></li>
+              <li>Mail: Startup Village, Chandrampalem, Pedda Rushikonda, Madhurawada, Visakhapatnam, Andhra Pradesh 530048, India</li>
+            </ul>
+            <p>These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”), and Klinikmed Technologies Private Limited, concerning your access to and use of the Services. By accessing the Services, you acknowledge that you have read, understood, and agreed to be bound by all of these Legal Terms.</p>
+            <p className="font-bold text-red-600">IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</p>
+          </Section>
+          <Section title="Table of Contents">
+            <ol className="list-decimal pl-6">
+              <li>Our Services</li>
+              <li>Intellectual Property Rights</li>
+              <li>User Representations</li>
+              <li>User Registration</li>
+              <li>Products</li>
+              <li>Purchases and Payment</li>
+              <li>Subscriptions</li>
+              <li>Return/Refunds Policy</li>
+              <li>Software</li>
+              <li>Prohibited Activities</li>
+              <li>User Generated Contributions</li>
+              <li>Contribution Licence</li>
+              <li>Mobile Application Licence</li>
+              <li>Social Media</li>
+              <li>Third-Party Websites and Content</li>
+              <li>Services Management</li>
+              <li>Privacy Policy</li>
+              <li>Term and Termination</li>
+              <li>Modifications and Interruptions</li>
+              <li>Governing Law</li>
+              <li>Dispute Resolution</li>
+              <li>Corrections</li>
+              <li>Disclaimer</li>
+              <li>Limitations of Liability</li>
+              <li>Indemnification</li>
+              <li>User Data</li>
+              <li>Electronic Communications, Transactions, and Signatures</li>
+              <li>SMS Text Messaging</li>
+              <li>Miscellaneous</li>
+              <li>Contact Us</li>
+            </ol>
+          </Section>
+          <Section title="1. Our Services">
+            <p>The information provided when using the Services is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Services from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.</p>
+          </Section>
+          <Section title="2. Intellectual Property Rights">
+            <h3 className="font-semibold">Our Intellectual Property</h3>
+            <p>We are the owner or the licensee of all intellectual property rights in our Services, including all:</p>
+            <ul>
+              <li>Source code</li>
+              <li>Databases</li>
+              <li>Functionality</li>
+              <li>Software</li>
+              <li>Website designs</li>
+              <li>Audio, video, text, photographs, and graphics (collectively, the “Content”)</li>
+              <li>Trademarks, service marks, and logos (the “Marks”)</li>
+            </ul>
+            <p>Our Content and Marks are protected by copyright and trademark laws, as well as other intellectual property rights and unfair competition laws and treaties globally. The Content and Marks are provided in or through the Services “AS IS” for your personal, non-commercial use only.</p>
+            <h3 className="font-semibold">Your Use of Our Services</h3>
+            <p>Subject to your compliance with these Legal Terms, including the “PROHIBITED ACTIVITIES” section below, we grant you a non-exclusive, non-transferable, revocable licence to:</p>
+            <ul>
+              <li>Access the Services</li>
+              <li>Download or print a copy of any portion of the Content you have properly gained access to</li>
+            </ul>
+            <p>Solely for your personal, non-commercial use. You may not copy, reproduce, republish, upload, post, display, encode, translate, transmit, distribute, sell, license, or exploit any part of the Services, Content, or Marks for commercial purposes without our prior written permission. To request permission: hello@medikloud.coom</p>
+            <p>If permission is granted, you must clearly identify us as the owners/licensors and retain copyright or proprietary notices. We reserve all rights not expressly granted. Any breach of these rights will result in immediate termination of your right to use the Services.</p>
+            <h3 className="font-semibold">Your Submissions</h3>
+            <p>By sending us any content (questions, feedback, suggestions, etc.), you agree to assign all intellectual property rights in such Submissions to us. We may use these for any lawful purpose, commercial or otherwise, without acknowledgment or compensation.</p>
+            <h3 className="font-semibold">Your Responsibility</h3>
+            <ul>
+              <li>Confirm you’ve read and agree to “PROHIBITED ACTIVITIES”</li>
+              <li>Will not send illegal, harassing, hateful, harmful, or misleading content</li>
+              <li>Waive any moral rights</li>
+              <li>Warrant originality or proper licensing</li>
+              <li>Confirm Submissions are not confidential</li>
+            </ul>
+            <p>You are solely responsible for your Submissions and agree to reimburse us for any losses resulting from violations.</p>
+          </Section>
+          <Section title="3. User Representations">
+            <p>By using the Services, you represent and warrant that:</p>
+            <ul>
+              <li>Registration info is accurate and will be kept current</li>
+              <li>You have legal capacity and agree to these Terms</li>
+              <li>You are not under the age of 13</li>
+              <li>If a minor, you have parental permission</li>
+              <li>You will not use automation (bots/scripts) to access the Services</li>
+              <li>You will not use the Services for illegal purposes</li>
+              <li>Your use complies with applicable laws</li>
+            </ul>
+            <p>Providing false info may result in suspension or termination of your account.</p>
+          </Section>
+          <Section title="4. User Registration">
+            <p>You may be required to register to use the Services. You agree to:</p>
+            <ul>
+              <li>Keep your password confidential</li>
+              <li>Be responsible for all activity under your account</li>
+            </ul>
+            <p>We may reclaim usernames if they are deemed inappropriate, obscene, or otherwise objectionable.</p>
+          </Section>
+          <Section title="5. Products">
+            <p>We strive to accurately display:</p>
+            <ul>
+              <li>Colors</li>
+              <li>Features</li>
+              <li>Specifications</li>
+              <li>Details of products</li>
+            </ul>
+            <p>However, we do not guarantee accuracy. Your display may differ from actual product colors or details.</p>
+            <ul>
+              <li>Availability: Not guaranteed</li>
+              <li>Discontinuation: May occur at any time</li>
+              <li>Prices: Subject to change</li>
+            </ul>
+          </Section>
+          <Section title="6. Purchases and Payment">
+            <h3 className="font-semibold">Accepted Payment Methods</h3>
+            <ul>
+              <li>Visa</li>
+              <li>Mastercard</li>
+              <li>American Express</li>
+              <li>Discover</li>
+              <li>PayPal</li>
+            </ul>
+            <p>You agree to:</p>
+            <ul>
+              <li>Provide accurate account and payment info</li>
+              <li>Update info as needed</li>
+              <li>Pay all charges including shipping and taxes in INR</li>
+              <li>Allow us to charge your selected payment method upon order</li>
+            </ul>
+            <p>We may correct pricing errors and refuse or limit orders if necessary.</p>
+          </Section>
+          <Section title="7. Subscriptions">
+            <h3 className="font-semibold">Billing and Renewal</h3>
+            <p>Subscriptions auto-renew unless canceled. We charge your payment method recurringly without additional approval unless you cancel.</p>
+            <h3 className="font-semibold">Cancellation</h3>
+            <p>Email us at hello@medikloud.coom. Cancellations take effect at the end of your paid term.</p>
+            <h3 className="font-semibold">Fee Changes</h3>
+            <p>We may adjust fees and will notify you in accordance with applicable law.</p>
+          </Section>
+          <Section title="8. Return/Refunds Policy">
+            <p>All sales are final. No refunds will be issued.</p>
+          </Section>
+          <Section title="9. Software">
+            <p>Software provided may come with an End User License Agreement (EULA). If not:</p>
+            <ul>
+              <li>You get a non-exclusive, personal, revocable, non-transferable license</li>
+              <li>Software is provided “AS IS”, with no warranties</li>
+              <li>You accept all risks</li>
+              <li>Reproduction or redistribution is prohibited unless allowed by the EULA</li>
+            </ul>
+          </Section>
+          <Section title="10. Prohibited Activities">
+            <p>You agree not to use the Services for anything outside their intended purpose. Prohibited activities include:</p>
+            <ul>
+              <li>Scraping or collecting data without permission</li>
+              <li>Deceiving or defrauding users</li>
+              <li>Circumventing security features</li>
+              <li>Uploading viruses or spam</li>
+              <li>Automated use (scripts, bots)</li>
+              <li>Harassment or impersonation</li>
+              <li>Violating intellectual property rights</li>
+              <li>Reverse engineering software</li>
+              <li>Using Services to compete with or exploit us commercially</li>
+              <li>Unauthorized selling or advertising</li>
+            </ul>
+            <p>Any such actions may result in suspension or termination of access.</p>
+          </Section>
+          <Section title="11. User Generated Contributions">
+            <p>The Services do not offer users the ability to submit or post content. However, we may provide opportunities to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials (collectively, “Contributions”), including but not limited to:</p>
+            <ul>
+              <li>Text</li>
+              <li>Writings</li>
+              <li>Video</li>
+              <li>Audio</li>
+              <li>Photographs</li>
+              <li>Graphics</li>
+              <li>Comments</li>
+              <li>Suggestions</li>
+              <li>Personal information or other materials</li>
+            </ul>
+            <p>These Contributions may be viewable by other users and on third-party websites. Any Contributions will be treated in accordance with our Privacy Policy.</p>
+            <p>By making Contributions, you represent and warrant that:</p>
+            <ul>
+              <li>You own or have the necessary rights and permissions to use and authorize us and other users to use your Contributions as intended.</li>
+              <li>Your Contributions do not infringe on any third party’s rights (e.g., copyright, trademark, patent).</li>
+              <li>You have obtained consent from any identifiable individuals in your Contributions.</li>
+              <li>Your Contributions are not false, misleading, or defamatory.</li>
+              <li>They are not unsolicited advertisements or spam.</li>
+              <li>They are not obscene, offensive, or inappropriate.</li>
+              <li>They do not violate privacy rights, laws regarding minors, or any applicable law.</li>
+              <li>They do not contain offensive content tied to race, gender, nationality, disability, etc.</li>
+              <li>They do not violate these Legal Terms or link to any violating material.</li>
+            </ul>
+            <p>Any breach of the above may result in termination or suspension of your access to the Services.</p>
+          </Section>
+          <Section title="12. Contribution Licence">
+            <ul>
+              <li>We may access, store, process, and use any data you provide in accordance with the Privacy Policy and your settings.</li>
+              <li>If you submit suggestions or feedback, we may use and share that feedback without compensation to you.</li>
+            </ul>
+            <p>You retain ownership of your Contributions and associated intellectual property rights. However:</p>
+            <ul>
+              <li>We are not liable for any statements in your Contributions.</li>
+              <li>You are fully responsible for them.</li>
+              <li>You agree not to pursue legal action against us regarding your Contributions.</li>
+            </ul>
+          </Section>
+          <Section title="13. Mobile Application Licence">
+            <h3 className="font-semibold">Use Licence</h3>
+            <ul>
+              <li>Install and use the App on your personal device</li>
+              <li>Access and use the App in accordance with these Legal Terms</li>
+            </ul>
+            <p>You agree NOT to:</p>
+            <ol className="list-decimal pl-6">
+              <li>Decompile, reverse engineer, disassemble, or decrypt the App</li>
+              <li>Modify or create derivative works of the App</li>
+              <li>Violate laws while using the App</li>
+              <li>Remove or obscure any copyright or trademark notices</li>
+              <li>Use the App for commercial purposes</li>
+              <li>Make it accessible over a network to multiple users</li>
+              <li>Use it to build competing products</li>
+              <li>Use it to send spam or unsolicited emails</li>
+              <li>Use our IP or interfaces to design other software or hardware</li>
+            </ol>
+            <h3 className="font-semibold">Apple and Android Devices</h3>
+            <ul>
+              <li>The license is limited to use on Apple/Android devices only</li>
+              <li>We, not the App Distributor, are responsible for support</li>
+              <li>App Distributors are not liable for warranty issues beyond refunds</li>
+              <li>You confirm you are not in a US-embargoed or sanctioned country</li>
+              <li>You comply with your mobile provider’s terms</li>
+              <li>The App Distributor is a third-party beneficiary of this agreement and may enforce it against you</li>
+            </ul>
+          </Section>
+          <Section title="14. Social Media">
+            <p>You may connect your account with a Third-Party Account (e.g., Facebook, Google). By doing so:</p>
+            <ul>
+              <li>You authorize us to access and store content from that account (e.g., friend lists)</li>
+              <li>You confirm you are allowed to grant us access</li>
+              <li>We may use such data to display on your profile or enhance your experience</li>
+            </ul>
+            <p>You can disconnect a Third-Party Account at any time. We will attempt to delete all related data, except your username and profile picture. Your relationship with these third parties is governed by your agreements with them, not us. We do not review or guarantee the legality, accuracy, or content of Third-Party services.</p>
+          </Section>
+          <Section title="15. Third-Party Websites and Content">
+            <p>The Services may contain links to or content from third-party websites or services (collectively, “Third-Party Content” and “Third-Party Websites”). We do not:</p>
+            <ul>
+              <li>Monitor or verify such websites or content</li>
+              <li>Guarantee their accuracy, legality, or policies</li>
+              <li>Endorse their offerings or practices</li>
+            </ul>
+            <p>Accessing or using them is at your own risk. Purchases made through such websites are between you and the third party only. You agree to hold us blameless from:</p>
+            <ul>
+              <li>Any loss or harm from using Third-Party Content or Websites</li>
+              <li>Any dissatisfaction with your purchases or experience there</li>
+            </ul>
+          </Section>
+          <Section title="16. Services Management">
+            <ul>
+              <li>Monitor for Legal Term violations</li>
+              <li>Take legal action if you breach terms or laws</li>
+              <li>Disable or restrict access to your Contributions</li>
+              <li>Remove burdensome files or content</li>
+              <li>Manage the Services to protect our platform and ensure smooth operation</li>
+            </ul>
+          </Section>
+          <Section title="17. Privacy Policy">
+            <p>We care about your privacy. Please review our Privacy Policy. By using the Services, you agree to be bound by it. Our Services are hosted in India. If you access them from another region with different data laws, you consent to your data being transferred and processed in India.</p>
+          </Section>
+          <Section title="18. Term and Termination">
+            <p>These Terms remain effective while you use the Services. We may, without notice, terminate or suspend your access if:</p>
+            <ul>
+              <li>You breach any part of these Legal Terms</li>
+              <li>You break any law</li>
+              <li>We choose to do so for any reason or no reason</li>
+            </ul>
+            <p>If terminated:</p>
+            <ul>
+              <li>You may not register a new account under your name or any other name</li>
+              <li>We reserve the right to take legal action against violations</li>
+            </ul>
+          </Section>
+          <Section title="19. Modifications and Interruptions">
+            <ul>
+              <li>Modify or remove any content</li>
+              <li>Change or discontinue the Services at any time</li>
+              <li>Do so without notice or obligation</li>
+            </ul>
+            <p>We are not responsible for:</p>
+            <ul>
+              <li>Downtime</li>
+              <li>Delays</li>
+              <li>Interruptions due to updates or maintenance</li>
+            </ul>
+            <p>We are not obligated to provide:</p>
+            <ul>
+              <li>Continuous operation</li>
+              <li>Bug fixes or new releases</li>
+            </ul>
+          </Section>
+          <Section title="20. Governing Law">
+            <p>These Legal Terms are governed by the laws of India. You and Klinikmed technologies Private Limited agree that all disputes will be subject to the exclusive jurisdiction of the courts of India.</p>
+          </Section>
+          <Section title="21. Dispute Resolution">
+            <h3 className="font-semibold">Informal Negotiations</h3>
+            <p>To expedite resolution and reduce costs of any dispute, controversy, or claim (“Dispute”) related to these Legal Terms, the parties (“you” and “we”) agree to first attempt informal negotiations for at least sixty (60) days before initiating arbitration. Informal negotiations begin upon written notice from one party to the other.</p>
+            <h3 className="font-semibold">Binding Arbitration</h3>
+            <p>Any Dispute shall be finally resolved by the International Commercial Arbitration Court under the European Arbitration Chamber (Brussels, Avenue Louise, 146), in accordance with its Rules.</p>
+            <ul>
+              <li>Arbitrator: One (1)</li>
+              <li>Seat of Arbitration: Visakhapatnam, India</li>
+              <li>Language: English</li>
+              <li>Governing Law: Substantive law of India</li>
+            </ul>
+            <h3 className="font-semibold">Restrictions</h3>
+            <ul>
+              <li>No joint arbitration proceedings</li>
+              <li>No class actions</li>
+              <li>No representative capacity arbitration on behalf of the public</li>
+            </ul>
+            <h3 className="font-semibold">Exceptions</h3>
+            <ul>
+              <li>Enforcement or validity of intellectual property rights</li>
+              <li>Allegations of theft, piracy, invasion of privacy, or unauthorised use</li>
+              <li>Claims for injunctive relief</li>
+            </ul>
+            <p>If this section is found unenforceable, such Disputes shall be resolved in courts of competent jurisdiction in India.</p>
+          </Section>
+          <Section title="22. Corrections">
+            <p>The Services may contain errors, inaccuracies, or omissions, including in descriptions, pricing, and availability. We reserve the right to correct, update, or change such information at any time without notice.</p>
+          </Section>
+          <Section title="23. Disclaimer">
+            <p>THE SERVICES ARE PROVIDED ON AN “AS-IS” AND “AS-AVAILABLE” BASIS. You agree to use the Services at your sole risk. To the fullest extent permitted by law, we disclaim all warranties, including but not limited to:</p>
+            <ul>
+              <li>Accuracy or completeness of the content</li>
+              <li>Personal injury or property damage from using the Services</li>
+              <li>Unauthorized access to your personal or financial data</li>
+              <li>Bugs, viruses, or harmful code from third parties</li>
+              <li>Errors or omissions in content</li>
+            </ul>
+            <p>We are not responsible for any third-party advertisements, products, or services linked through the Services. Exercise caution and sound judgment when making transactions.</p>
+          </Section>
+          <Section title="24. Limitations of Liability">
+            <p>In no event shall we (including directors, employees, agents) be liable for:</p>
+            <ul>
+              <li>Direct or indirect damages</li>
+              <li>Lost profits, data, or revenue</li>
+              <li>Incidental, special, or punitive damages</li>
+            </ul>
+            <p>Our maximum liability shall not exceed the amount paid by you to us in the three (3) months prior to the event giving rise to the claim. Some jurisdictions may not allow these limitations, so they may not apply to you.</p>
+          </Section>
+          <Section title="25. Indemnification">
+            <p>You agree to defend, indemnify, and hold us harmless from claims or damages resulting from:</p>
+            <ol className="list-decimal pl-6">
+              <li>Your use of the Services</li>
+              <li>Breach of these Legal Terms</li>
+              <li>Breach of your warranties</li>
+              <li>Infringement of third-party rights</li>
+              <li>Harm caused to another user</li>
+            </ol>
+            <p>We reserve the right to take over the defence of any matter at your expense and will notify you of any claim.</p>
+          </Section>
+          <Section title="26. User Data">
+            <p>We retain data you transmit for the purpose of operating the Services. While we perform regular backups, you are solely responsible for your own data. We are not liable for:</p>
+            <ul>
+              <li>Loss or corruption of data</li>
+              <li>Any resulting consequences or damages</li>
+            </ul>
+          </Section>
+          <Section title="27. Electronic Communications, Transactions, and Signatures">
+            <p>By using the Services, you agree to receive electronic communications (e.g., emails, forms). This includes all transactions initiated or completed electronically with us.</p>
+          </Section>
+          <Section title="28. SMS Text Messaging">
+            <h3 className="font-semibold">Program Description</h3>
+            <p>By opting in, you consent to receive SMS messages from Medikloud, which may include:</p>
+            <h3 className="font-semibold">Opting Out</h3>
+            <p>To stop receiving messages, call: +91 7702670993</p>
+            <h3 className="font-semibold">Message and Data Rates</h3>
+            <p>Standard message and data rates may apply as per your carrier.</p>
+            <h3 className="font-semibold">Support</h3>
+            <p>Questions? Email: hello@medikloud.coom or call: +91 7702670993</p>
+          </Section>
+          <Section title="29. Miscellaneous">
+            <p>[Reserved]</p>
+          </Section>
+          <Section title="30. Contact Us">
+            <p>If you have complaints or require assistance regarding the Services, contact:</p>
+            <ul>
+              <li>Klinikmed Technologies Private Limited</li>
+              <li>Startup Village, Chandrampalem, Pedda Rushikonda, Madhurawada, Visakhapatnam, Andhra Pradesh 530048, India</li>
+              <li>📞 Phone: +91 7702670993</li>
+              <li>📧 Email: <a href="mailto:hello@medikloud.com" className="text-blue-600 underline">hello@medikloud.com</a></li>
+            </ul>
+          </Section>
         </div>
       </div>
     </div>
