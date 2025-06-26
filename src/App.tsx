@@ -221,7 +221,7 @@ function App() {
     {
       icon: FileText,
       title: "AI Prescription Reading",
-      description: "Advanced OCR technology that accurately reads and processes both digital and handwritten prescriptions.",
+      description: "Advanced OCR tech that processes digital and handwritten prescriptions with ~100% accuracy (yes, seriously).",
       color: "from-pink-500 to-rose-500"
     },
     {
