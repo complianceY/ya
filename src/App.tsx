@@ -806,7 +806,7 @@ function App() {
               
               <div className="space-y-6">
                 {[
-                  { icon: CheckCircle, text: "Complete pharmacy setup and operations" },
+                  { icon: CheckCircle, text: "Enable Medicine Deliveries, No Cost" },
                   { icon: Zap, text: "AI-powered automation and efficiency" },
                   { icon: Shield, text: "Enterprise-grade security and compliance" },
                   { icon: TrendingUp, text: "Proven results and scalable solutions" }
