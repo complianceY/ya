@@ -508,7 +508,7 @@ function App() {
               style={{ animationDelay: '0.8s' }}
             >
               We’re building the future of hospital pharmacies.
-From setting up tech-first in-hospital pharmacies and smart ordering kiosks, to enabling online deliveries and streamlining inventory and prescription management — we help hospitals operate their pharmacies smarter, faster, and more efficiently.
+From enabling online deliveries to setting up tech-first in-hospital pharmacies and smart ordering kiosks — we help hospitals operate their pharmacies smarter, faster, and more efficiently.
             </p>
             
             <div 
