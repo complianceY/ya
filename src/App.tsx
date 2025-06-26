@@ -934,6 +934,9 @@ function App() {
       </footer>
 
       <style jsx>{`
+    .hero-heading {
+      line-height: 1.2;
+    }
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(180deg); }
