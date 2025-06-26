@@ -947,13 +947,23 @@ function App() {
 
       {/* Contact Info or Leave Blank */}
       <div>
-        <h4 className="text-lg font-semibold mb-4 text-cyan-400">Contact</h4>
-        <ul className="space-y-3 text-gray-300">
-          <li>Email: hello@medikloud.com</li>
-          <li>Phone: +91-9876543210</li>
-        </ul>
-      </div>
-    </div>
+  <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
+  <ul className="space-y-3 text-gray-300 mb-4">
+    <li>Email: hello@medikloud.com</li>
+    <li>Phone: +91-9876543210</li>
+  </ul>
+  <div className="flex items-center space-x-4 text-gray-400">
+    {/* LinkedIn Icon */}
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.7-1.2 2.4-2.4 5-2.4 5.4 0 6.4 3.5 6.4 8v9.2h-5V17c0-2.1 0-4.8-3-4.8s-3.5 2.3-3.5 4.7v7.1H7.5V8z"/>
+    </svg>
+
+    {/* X (Twitter) Icon */}
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+      <path d="M21.543 2.797c-.77.342-1.597.572-2.463.676a4.302 4.302 0 0 0 1.884-2.37 8.726 8.726 0 0 1-2.73 1.043 4.278 4.278 0 0 0-7.313 3.903 12.145 12.145 0 0 1-8.812-4.47 4.26 4.26 0 0 0-.579 2.15 4.28 4.28 0 0 0 1.905 3.564 4.257 4.257 0 0 1-1.937-.535v.053a4.28 4.28 0 0 0 3.433 4.192 4.295 4.295 0 0 1-1.13.15c-.276 0-.543-.026-.805-.077a4.282 4.282 0 0 0 3.997 2.974 8.59 8.59 0 0 1-6.323 1.771 12.11 12.11 0 0 0 6.56 1.926c7.872 0 12.18-6.518 12.18-12.172 0-.185-.004-.369-.012-.552a8.688 8.688 0 0 0 2.137-2.213z"/>
+    </svg>
+  </div>
+</div>
 
     <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
       <p className="hover:text-white transition-colors duration-300">
