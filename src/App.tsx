@@ -44,7 +44,7 @@ function App() {
   const [isHovering, setIsHovering] = useState(false);
   const [glowIntensity, setGlowIntensity] = useState(0);
   const heroRef = useRef(null);
-  const particlesRef = useRef([]);
+  const particlesRef = useRef([]);const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Enhanced typewriter effect with multiple phases
   useEffect(() => {
