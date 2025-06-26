@@ -241,8 +241,7 @@ function App() {
     { number: "Future", label: "Next-Gen Pharmacy Tech", icon: CheckCircle, color: "from-orange-500 to-red-500" }
   ];
 
-  return (
-      
+  return (     
     <div className="min-h-screen bg-white relative">
       {/* Advanced Particle System */}
       <div className="fixed inset-0 pointer-events-none z-0">
