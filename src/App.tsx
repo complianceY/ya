@@ -303,10 +303,11 @@ function App() {
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
                 <img 
-  src="/MK_Logo_WOB.png" 
-  alt="MediKloud Logo" 
-  style={{ height: '120px', width: 'auto' }} 
-/>
+                  src="/New_Logo_MK.png" 
+                  alt="MediKloud Logo" 
+                  className={`transition-all duration-500 group-hover:scale-125 ${scrollY > 50 ? 'h-8' : 'h-10'}`} 
+                />
+                <div className="absolute inset-0 bg-blue-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
               </div>
             </div>
             
@@ -877,17 +878,17 @@ function App() {
       </section>
 
       {/* Advanced Footer */}
-      <footer className="bg-white text-gray-800 py-16 relative overflow-hidden">
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-black to-gray-900"></div> */}
+      <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-gray-900"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="group">
-              <div className="mb-6">
+              <div className="flex items-center space-x-3 mb-6">
                 <img 
                   src="/MK_Logo_WOB.png" 
                   alt="MediKloud Logo" 
-                  className="h-100 w-auto" 
+                  className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
                 />
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
