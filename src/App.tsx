@@ -240,7 +240,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden relative">
+    <div className="min-h-screen bg-white relative">
       {/* Advanced Particle System */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <svg className="w-full h-full">
