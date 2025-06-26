@@ -234,7 +234,7 @@ function App() {
 
   const visionStats = [
     { number: "Vision", label: "Revolutionizing Healthcare", icon: Package, color: "from-blue-500 to-cyan-500" },
-    { number: "AI", label: "Intelligence at Core", icon: Building2, color: "from-purple-500 to-pink-500" },
+    { number: "AI", label: "Intelligence at Our Core", icon: Building2, color: "from-purple-500 to-pink-500" },
     { number: "Speed", label: "< 10min Hospital Delivery", icon: Timer, color: "from-green-500 to-teal-500" },
     { number: "Future", label: "Next-Gen Pharmacy Tech", icon: CheckCircle, color: "from-orange-500 to-red-500" }
   ];
