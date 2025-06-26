@@ -834,7 +834,7 @@ function App() {
             >
               <form className="space-y-6">
                 {[
-                  { id: "name", label: "Hospital/Organization Name", type: "text", placeholder: "Enter your organization name" },
+                  { id: "name", label: "Company/Hospital Name", type: "text", placeholder: "Enter your organization name" },
                   { id: "email", label: "Email Address", type: "email", placeholder: "Enter your email" },
                   { id: "phone", label: "Phone Number", type: "tel", placeholder: "Enter your phone number" }
                 ].map((field, index) => (
