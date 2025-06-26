@@ -424,10 +424,10 @@ function App() {
             </div>
             
             <h1 
-              className="text-5xl md:text-6xl font-bold mb-6 cursor-pointer select-none space-y-4"
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
+  className="hero-heading text-5xl md:text-6xl font-bold mb-6 cursor-pointer select-none space-y-4"
+  onMouseEnter={() => setIsHovering(true)}
+  onMouseLeave={() => setIsHovering(false)}
+>
               <div className="block">
                 <span 
                   className="inline-block animate-fade-in-up text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-900 to-black hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 transition-all duration-700 transform hover:scale-105"
