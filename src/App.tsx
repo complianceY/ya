@@ -1057,6 +1057,7 @@ function App() {
         }
       />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfService />} />
     </Routes>
   );
 }
