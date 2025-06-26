@@ -423,7 +423,7 @@ function App() {
               isVisible.hero ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
             }`}
           >
-            <div className="mb-4">
+            <div className="mb-1">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 rounded-full text-sm font-semibold mb-4 animate-bounce">
                 🚀 Accelerating Pharmacies at Hospitals
               </span>
