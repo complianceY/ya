@@ -177,8 +177,8 @@ function App() {
     },
     {
       icon: Bed,
-      title: "Bedside Delivery Network",
-      description: "first-of-its-kind solution empowering small clinics to offer medicines without owning a pharmacy, delivered under 10 minutes from our hospital pharmacies.",
+      title: "Virtual Pharmacy Kiosks",
+      description: "first-of-its-kind solution empowering small clinics to offer medicines without owning a pharmacy, delivered under 10 minutes from our nearest hospital pharmacies.",
       color: "from-purple-600 to-pink-600",
       stats: "< 10 min in-hospital",
       highlight: true
