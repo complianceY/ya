@@ -305,7 +305,7 @@ function App() {
                 <img 
                   src="/New_Logo_MK.png" 
                   alt="MediKloud Logo" 
-                  className={`transition-all duration-500 group-hover:scale-125 ${scrollY > 50 ? 'h-12' : 'h-16'}`} 
+                  className={`transition-all duration-500 group-hover:scale-125 ${scrollY > 50 ? 'h-12' : 'h-15'}`} 
                 />
                 <div className="absolute inset-0 bg-blue-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
               </div>
