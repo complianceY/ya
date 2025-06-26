@@ -495,7 +495,7 @@ function App() {
               
               <div className="block">
   <span 
-    className="inline-block text-xl animate-fade-in-up text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 hover:from-purple-600 hover:via-indigo-600 hover:to-blue-600 transition-all duration-700 transform hover:scale-105"
+    className="inline-block text-4xl animate-fade-in-up text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 hover:from-purple-600 hover:via-indigo-600 hover:to-blue-600 transition-all duration-700 transform hover:scale-105"
     style={{ animationDelay: '0.6s' }}
   >
     from Hospital Pharmacies
