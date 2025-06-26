@@ -315,8 +315,6 @@ function App() {
               {[
                 { name: 'Solutions', icon: Building2, target: 'delivery' },
                 { name: 'Services', icon: Layers, target: 'Services' },
-                { name: 'Technology', icon: Bot, target: 'stats' },
-                { name: 'About', icon: Info, target: 'hero' }
               ].map((item, index) => (
                 <button 
                   key={item.name}
