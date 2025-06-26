@@ -834,10 +834,10 @@ function App() {
             >
               <form className="space-y-6">
                 {[
-                  { id: "name", label: "Company/Hospital Name", type: "text", placeholder: "Enter your organization name" },
-                  { id: "email", label: "Email Address", type: "email", placeholder: "Enter your email" },
-                  { id: "phone", label: "Phone Number", type: "tel", placeholder: "Enter your phone number" }
-                ].map((field, index) => (
+  { id: "yourName", label: "Your Name", type: "text", placeholder: "Enter your name" },
+  { id: "phone", label: "Phone Number", type: "tel", placeholder: "Enter your phone number" },
+  { id: "company", label: "Company/Hospital Name", type: "text", placeholder: "Enter your organization name" }
+].map((field, index) => (
                   <div key={field.id} style={{ animationDelay: `${index * 150}ms` }}>
                     <label htmlFor={field.id} className="block text-sm font-medium text-white mb-2">
                       {field.label}
