@@ -1008,6 +1008,26 @@ function App() {
         
         .animate-blink {
           animation: blink 1s infinite;
+
+        @keyframes bubble-slow {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+}
+
+.animate-bubble-slow {
+  animation: bubble-slow 4s ease-in-out infinite;
+}
+          
         }
       `}</style>
     </div>
