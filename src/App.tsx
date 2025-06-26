@@ -840,7 +840,7 @@ function App() {
 ].map((field, index) => (
                   <div key={field.id} style={{ animationDelay: `${index * 150}ms` }}>
                     <label htmlFor={field.id} className="block text-sm font-medium text-white mb-2">
-                      {field.label}
+                      {field.label} <span className="text-red-500">*</span>
                     </label>
                     <input 
                       type={field.type} 
