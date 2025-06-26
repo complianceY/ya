@@ -456,7 +456,7 @@ function App() {
                     {typewriterText}
                   </span>
                   <span 
-                    className="animate-blink text-blue-500 ml-1 text-4xl font-thin"
+                    className="animate-blink text-blue-500 ml-1 text-6xl font-thin"
                     style={{
                       textShadow: `0 0 ${10 + glowIntensity * 0.1}px rgba(59, 130, 246, 0.6)`,
                       filter: `drop-shadow(0 0 5px rgba(6, 182, 212, 0.4))`
