@@ -1052,7 +1052,6 @@ function App() {
         }
       `}</style>
     </div>
-    </div>
   );
 }
 
