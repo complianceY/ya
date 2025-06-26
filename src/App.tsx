@@ -659,8 +659,7 @@ function App() {
               {' '}Hospital Pharmacy Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We're building an AI-powered ecosystem that transforms hospital pharmacy operations - from setting up tech-first pharmacies 
-              to delivering medications directly from hospital pharmacies to patients wherever they are.
+              With AI-powered automation, we eliminate inventory losses and pilferage, unlock new revenue streams, and give hospitals full real-time control over their pharmacy operations.
             </p>
           </div>
           
