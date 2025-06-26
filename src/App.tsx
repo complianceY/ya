@@ -294,6 +294,7 @@ function App() {
           backdropFilter: 'blur(20px) saturate(180%)',
           borderBottom: scrollY > 50 ? '1px solid rgba(229, 231, 235, 0.5)' : 'none',
           transform: `translateY(${scrollY > 100 ? '-2px' : '0px'}) scaleX(${scrollY > 50 ? '0.85' : '1'})`,
+          borderRadius: scrollY > 50 ? '20px' : '0px',
           boxShadow: scrollY > 50 ? '0 25px 50px rgba(0, 0, 0, 0.15)' : 'none'
         }}
       >
