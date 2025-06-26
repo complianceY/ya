@@ -34,6 +34,8 @@ import {
   Phone,
   Award
 } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PrivacyPolicy from './PrivacyPolicy'; // Adjust the path if needed
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
