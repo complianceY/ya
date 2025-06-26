@@ -1051,10 +1051,8 @@ function App() {
           animation: blink 1s infinite;
         }
       `}</style>
-    </>
-        } />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      </Routes>
+    </div>
+    </div>
   );
 }
 
