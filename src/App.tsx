@@ -37,6 +37,7 @@ import {
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PrivacyPolicy from './PrivacyPolicy'; // Adjust the path if needed
 import TermsOfService from './TermsOfService';
+import ReturnPolicy from './ReturnPolicy';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
