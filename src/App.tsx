@@ -307,7 +307,6 @@ function App() {
                   alt="MediKloud Logo" 
                   className={`${scrollY > 50 ? 'h-8' : 'h-10'}`} 
                 />
-                <div className="absolute inset-0 bg-blue-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
               </div>
             </div>
             
