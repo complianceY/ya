@@ -430,7 +430,7 @@ function App() {
             </div>
             
             <h1 
-  className="hero-heading text-5xl md:text-6xl font-bold mb-6 cursor-pointer select-none space-y-1"
+  className="hero-heading text-5xl md:text-6xl font-bold mb-6 cursor-pointer select-none space-y-4"
   onMouseEnter={() => setIsHovering(true)}
   onMouseLeave={() => setIsHovering(false)}
 >
