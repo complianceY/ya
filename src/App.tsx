@@ -1041,7 +1041,7 @@ function App() {
         
         .animate-gradient-x {
           animation: gradient-x 3s ease infinite;
-        }
+           }
         
         .animate-count-up {
           animation: count-up 0.8s ease-out forwards;
