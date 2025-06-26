@@ -313,33 +313,38 @@ function App() {
             
             {/* Desktop Navigation with Professional Menu Items */}
             <div className={`hidden md:flex items-center transition-all duration-500 ${scrollY > 50 ? 'space-x-4' : 'space-x-8'}`}>
-              {[
-                { name: 'Solutions', icon: Building2, target: 'delivery' },
-                { name: 'Services', icon: Layers, target: 'Services' },
-              ].map((item, index) => (
-                <button 
-                  key={item.name}
-                  onClick={() => scrollToSection(item.target)}
-                  className="relative text-gray-700 hover:text-blue-600 transition-all duration-500 group overflow-hidden flex items-center space-x-1 cursor-pointer"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <item.icon className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className={`relative z-10 transition-all duration-500 ${scrollY > 50 ? 'text-sm' : 'text-base'}`}>
-  {item.name}
-</span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 transition-all duration-500 group-hover:w-full"></span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 rounded-lg transform scale-110"></span>
-                </button>
-              ))}
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-full overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center"
-              >
-                <span className="relative z-10 transition-transform duration-300 group-hover:scale-105">Contact Us</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse rounded-full"></div>
-              </button>
-            </div>
+  {[
+    { name: 'Solutions', icon: Building2, target: 'delivery' },
+    { name: 'Services', icon: Layers, target: 'Services' },
+  ].map((item, index) => (
+    <button 
+      key={item.name}
+      onClick={() => scrollToSection(item.target)}
+      className={`group relative px-4 py-2 rounded-full overflow-hidden flex items-center space-x-2 transition-all duration-300
+                  ${scrollY > 50 ? 'text-sm' : 'text-base'} text-gray-700 hover:text-white`}
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      {/* Gradient background on hover */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+
+      {/* Icon */}
+      <item.icon className="h-4 w-4 z-10 text-blue-600 group-hover:text-white transition duration-300" />
+
+      {/* Text */}
+      <span className="z-10 font-medium">{item.name}</span>
+    </button>
+  ))}
+
+  {/* Contact Us button (unchanged) */}
+  <button 
+    onClick={() => scrollToSection('contact')}
+    className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-full overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center"
+  >
+    <span className="relative z-10 transition-transform duration-300 group-hover:scale-105">Contact Us</span>
+    <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
+    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse rounded-full"></div>
+  </button>
+</div>
 
             {/* Advanced Mobile Menu Button */}
             <button 
