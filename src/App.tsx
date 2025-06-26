@@ -806,7 +806,7 @@ function App() {
               
               <div className="space-y-6">
                 {[
-                  { icon: CheckCircle, text: "Enable Medicine Deliveries, No Cost" },
+                  { icon: CheckCircle, text: "Enable medicine deliveries at no upfront cost" },
                   { icon: Zap, text: "AI-powered automation and efficiency" },
                   { icon: Shield, text: "Enterprise-grade security and compliance" },
                   { icon: TrendingUp, text: "Proven results and scalable solutions" }
