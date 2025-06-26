@@ -868,7 +868,7 @@ function App() {
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group"
                   style={{ animationDelay: '600ms' }}
                 >
-                  <span className="relative z-10">Get Started Today</span>
+                  <span className="relative z-10">Let's talk</span>
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                 </button>
               </form>
