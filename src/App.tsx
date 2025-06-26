@@ -859,7 +859,7 @@ function App() {
                     id="message" 
                     rows={4} 
                     className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
-                    placeholder="Share your current pharmacy challenges and how we can help transform your operations"
+                    placeholder="How can we help you?"
                   ></textarea>
                 </div>
                 
