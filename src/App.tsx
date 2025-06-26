@@ -305,7 +305,7 @@ function App() {
                 <img 
   src="/MK_Logo_WOB.png" 
   alt="MediKloud Logo" 
-  style={{ height: '320px', width: 'auto' }} 
+  style={{ height: '80px', width: 'auto' }} 
 />
               </div>
             </div>
