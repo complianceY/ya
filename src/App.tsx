@@ -504,12 +504,16 @@ function App() {
             </h1>
             
             <p 
-              className="text-xl text-gray-600 mb-8 leading-relaxed animate-fade-in-up hover:text-gray-700 transition-colors duration-300"
-              style={{ animationDelay: '0.8s' }}
-            >
-              We’re building the future of hospital pharmacies. <br />
-From enabling online deliveries to setting up tech-first in-hospital pharmacies and smart ordering kiosks — we help hospitals operate their pharmacies smarter, faster, and more efficiently.
-            </p>
+  className="text-xl mb-8 leading-relaxed animate-fade-in-up transition-colors duration-300"
+  style={{ animationDelay: '0.8s' }}
+>
+  <span className="block text-blue-700 hover:text-blue-800">
+    We’re building the future of hospital pharmacies.
+  </span>
+  <span className="block text-gray-600 hover:text-gray-700">
+    From enabling online deliveries to setting up tech-first in-hospital pharmacies and smart ordering kiosks — we help hospitals operate their pharmacies smarter, faster, and more efficiently.
+  </span>
+</p>
             
             <div 
               className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
