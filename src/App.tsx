@@ -178,7 +178,7 @@ function App() {
     {
       icon: Bed,
       title: "Bedside Delivery Network",
-      description: "Lightning-fast delivery from our hospital pharmacies directly to patient beds within the hospital in under 10 minutes.",
+      description: "first-of-its-kind solution empowering small clinics to offer medicines without owning a pharmacy, Lightning-fast delivery from our hospital pharmacies.",
       color: "from-purple-600 to-pink-600",
       stats: "< 10 min in-hospital",
       highlight: true
@@ -903,7 +903,7 @@ function App() {
             {[
               {
                 title: "Solutions",
-                links: ["Tech-First Pharmacies", "Bedside Delivery", "Home Delivery", "AI Automation"]
+                links: ["Tech-First Pharmacies", "Virtual Pharmacies", "Home Delivery", "AI Automation"]
               },
               {
                 title: "Technology", 
