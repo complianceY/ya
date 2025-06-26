@@ -883,7 +883,7 @@ function App() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="group">
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="mb-6">
                 <img 
                   src="/MK_Logo_WOB.png" 
                   alt="MediKloud Logo" 
