@@ -5,7 +5,7 @@ const Header = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-16">
         <div className="flex items-center space-x-3 group cursor-pointer">
-          <img src="/MK_Logo_WOB.png" alt="MediKloud Logo" className="h-9 transition-all duration-500 group-hover:scale-110" />
+          <img src="/New_Logo_MK.png" alt="MediKloud Logo" className="h-9 transition-all duration-500 group-hover:scale-110" />
         </div>
         <div className="hidden md:flex items-center space-x-8">
           <a href="/" className="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>

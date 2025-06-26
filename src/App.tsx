@@ -34,6 +34,10 @@ import {
   Phone,
   Award
 } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PrivacyPolicy from './PrivacyPolicy'; // Adjust the path if needed
+import TermsOfService from './TermsOfService';
+import ReturnPolicy from './ReturnPolicy';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,7 +48,7 @@ function App() {
   const [isHovering, setIsHovering] = useState(false);
   const [glowIntensity, setGlowIntensity] = useState(0);
   const heroRef = useRef(null);
-  const particlesRef = useRef([]);
+  const particlesRef = useRef([]);const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Enhanced typewriter effect with multiple phases
   useEffect(() => {
@@ -239,7 +243,9 @@ function App() {
     { number: "Future", label: "Next-Gen Pharmacy Tech", icon: CheckCircle, color: "from-orange-500 to-red-500" }
   ];
 
-  return (
+  return (<Routes>
+    <Route path="/" element={
+      <>
     <div className="min-h-screen bg-white relative">
       {/* Advanced Particle System */}
       <div className="fixed inset-0 pointer-events-none z-0">
@@ -299,7 +305,7 @@ function App() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
                 <img 
@@ -423,20 +429,20 @@ function App() {
               isVisible.hero ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
             }`}
           >
-            <div className="mb-0">
+            <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 rounded-full text-sm font-semibold mb-4 animate-bounce">
                 🚀 Accelerating Pharmacies at Hospitals
               </span>
             </div>
             
             <h1 
-  className="hero-heading text-5xl md:text-6xl font-bold mb-6 cursor-pointer select-none space-y-1"
+  className="hero-heading text-5xl md:text-6xl font-bold mb-6 cursor-pointer select-none space-y-4"
   onMouseEnter={() => setIsHovering(true)}
   onMouseLeave={() => setIsHovering(false)}
 >
               <div className="block">
                 <span 
-                  className="inline-block animate-fade-in-up mt-0 text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-900 to-black hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 transition-all duration-700 transform hover:scale-105"
+                  className="inline-block animate-fade-in-up text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-900 to-black hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 transition-all duration-700 transform hover:scale-105"
                   style={{ animationDelay: '0.2s' }}
                 >
                   Lightning-Fast
@@ -494,13 +500,13 @@ function App() {
               </div>
               
               <div className="block">
-  <span 
-    className="inline-block text-5xl animate-fade-in-up text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 hover:from-purple-600 hover:via-indigo-600 hover:to-blue-600 transition-all duration-700 transform hover:scale-105"
-    style={{ animationDelay: '0.6s' }}
-  >
-    from Hospital Pharmacies
-  </span>
-</div>
+                <span 
+                  className="inline-block animate-fade-in-up text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 hover:from-purple-600 hover:via-indigo-600 hover:to-blue-600 transition-all duration-700 transform hover:scale-105"
+                  style={{ animationDelay: '0.6s' }}
+                >
+                  from Hospital Pharmacies
+                </span>
+              </div>
             </h1>
             
             <p 
@@ -832,46 +838,73 @@ function App() {
                 isVisible.contact ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
               }`}
             >
-              <form className="space-y-6">
-                {[
-  { id: "yourName", label: "Your Name", type: "text", placeholder: "Enter your name", required: true },
-  { id: "phone", label: "Phone Number", type: "tel", placeholder: "Enter your phone number", required: true },
-  { id: "company", label: "Company/Hospital Name", type: "text", placeholder: "Enter your organization name", required: true }
-].map((field, index) => (
-                  <div key={field.id} style={{ animationDelay: `${index * 150}ms` }}>
-                    <label htmlFor={field.id} className="block text-sm font-medium text-white mb-2">
-                      {field.label} <span className="text-red-500">*</span>
-                    </label>
-                    <input 
-                      type={field.type} 
-                      id={field.id} 
-                      className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
-                      placeholder={field.placeholder}
-                    />
-                  </div>
-                ))}
-                
-                <div style={{ animationDelay: '450ms' }}>
-                  <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                    Your Message
-                  </label>
-                  <textarea 
-                    id="message" 
-                    rows={4} 
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group"
-                  style={{ animationDelay: '600ms' }}
-                >
-                  <span className="relative z-10">Let's talk</span>
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                </button>
-              </form>
+              <form 
+  onSubmit={async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const response = await fetch("https://formspree.io/f/xrbkovkg", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    if (response.ok) {
+      setFormSubmitted(true);
+      e.target.reset(); // optional: clear form
+    }
+  }}
+  className="space-y-6"
+>
+  {[
+    { id: "yourName", label: "Your Name", type: "text", name: "name", placeholder: "Enter your name", required: true },
+    { id: "phone", label: "Phone Number", type: "tel", name: "phone", placeholder: "Enter your phone number", required: true },
+    { id: "company", label: "Company/Hospital Name", type: "text", name: "company", placeholder: "Enter your organization name", required: true }
+  ].map((field, index) => (
+    <div key={field.id} style={{ animationDelay: `${index * 150}ms` }}>
+      <label htmlFor={field.id} className="block text-sm font-medium text-white mb-2">
+        {field.label} <span className="text-red-500">*</span>
+      </label>
+      <input 
+        type={field.type} 
+        id={field.id} 
+        name={field.name}
+        required={field.required}
+        className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
+        placeholder={field.placeholder}
+      />
+    </div>
+  ))}
+
+  <div style={{ animationDelay: '450ms' }}>
+    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+      Your Message
+    </label>
+    <textarea 
+      id="message" 
+      name="message"
+      rows={4} 
+      className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
+      placeholder="How can we help you?"
+    ></textarea>
+  </div>
+
+  {/* Optional: Redirect to thank-you page */}
+  <input type="hidden" name="_redirect" value="https://medikloud.com/thank-you" />
+{formSubmitted && (
+  <p className="text-green-400 text-lg font-semibold">
+    Thanks for submitting the form. We will get in touch with you shortly.
+  </p>
+)}
+  <button 
+    type="submit" 
+    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group"
+    style={{ animationDelay: '600ms' }}
+  >
+    <span className="relative z-10">Let's talk</span>
+    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+  </button>
+</form>
             </div>
           </div>
         </div>
@@ -879,64 +912,73 @@ function App() {
 
       {/* Advanced Footer */}
       <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-gray-900"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="group">
-              <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src="/MK_Logo_WOB.png" 
-                  alt="MediKloud Logo" 
-                  className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
-                />
-              </div>
-              <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                Revolutionizing healthcare delivery through innovative pharmacy logistics and AI-powered automation.
-              </p>
-            </div>
-            
-            {[
-              {
-                title: "Solutions",
-                links: ["Tech-First Pharmacies", "Virtual Pharmacies", "Home Delivery", "AI Automation"]
-              },
-              {
-                title: "Technology", 
-                links: ["AI Prescription Reading", "Virtual Kiosks", "EHR Integration", "Data Security"]
-              },
-              {
-                title: "Company",
-                links: ["About Us", "Careers", "News", "Contact"]
-              }
-            ].map((section, sectionIndex) => (
-              <div key={section.title}>
-                <h4 className="text-lg font-semibold mb-4 text-cyan-400">{section.title}</h4>
-                <ul className="space-y-3 text-gray-300">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a 
-                        href="#" 
-                        className="hover:text-white transition-all duration-300 hover:translate-x-2 inline-block relative group"
-                        style={{ animationDelay: `${(sectionIndex * 4 + linkIndex) * 100}ms` }}
-                      >
-                        {link}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p className="hover:text-white transition-colors duration-300">
-              &copy; 2025 MediKloud. Transforming Healthcare Delivery. | Privacy Policy | Terms of Service
-            </p>
-          </div>
+  <div className="absolute inset-0 bg-gradient-to-t from-black to-gray-900"></div>
+  
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-4 gap-8">
+      <div className="group">
+        <div className="flex items-center space-x-3 mb-6">
+          <img 
+            src="/MK_Logo_WOB.png" 
+            alt="MediKloud Logo" 
+            className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
+          />
         </div>
-      </footer>
+        <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+          Revolutionizing healthcare delivery through innovative pharmacy logistics and AI-powered automation.
+        </p>
+      </div>
+
+      {/* Solutions */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4 text-cyan-400">Solutions</h4>
+        <ul className="space-y-3 text-gray-300">
+          <li>Tech-First Pharmacies</li>
+          <li>Virtual Pharmacies</li>
+          <li>Home Delivery</li>
+          <li>AI Automation</li>
+        </ul>
+      </div>
+
+      {/* Technology */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4 text-cyan-400">Technology</h4>
+        <ul className="space-y-3 text-gray-300">
+          <li>AI Prescription Reading</li>
+          <li>Virtual Kiosks</li>
+          <li>EHR Integration</li>
+          <li>Data Security</li>
+        </ul>
+      </div>
+
+      {/* Contact Info or Leave Blank */}
+      <div>
+  <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
+  <ul className="space-y-3 text-gray-300 mb-4">
+    <li>Email: hello@medikloud.com</li>
+    <li>Phone: +91-7702670993</li>
+  </ul>
+  <div className="flex items-center space-x-4 text-gray-400">
+    {/* LinkedIn Icon */}
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.7-1.2 2.4-2.4 5-2.4 5.4 0 6.4 3.5 6.4 8v9.2h-5V17c0-2.1 0-4.8-3-4.8s-3.5 2.3-3.5 4.7v7.1H7.5V8z"/>
+    </svg>
+
+    {/* X (Twitter) Icon */}
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+      <path d="M21.543 2.797c-.77.342-1.597.572-2.463.676a4.302 4.302 0 0 0 1.884-2.37 8.726 8.726 0 0 1-2.73 1.043 4.278 4.278 0 0 0-7.313 3.903 12.145 12.145 0 0 1-8.812-4.47 4.26 4.26 0 0 0-.579 2.15 4.28 4.28 0 0 0 1.905 3.564 4.257 4.257 0 0 1-1.937-.535v.053a4.28 4.28 0 0 0 3.433 4.192 4.295 4.295 0 0 1-1.13.15c-.276 0-.543-.026-.805-.077a4.282 4.282 0 0 0 3.997 2.974 8.59 8.59 0 0 1-6.323 1.771 12.11 12.11 0 0 0 6.56 1.926c7.872 0 12.18-6.518 12.18-12.172 0-.185-.004-.369-.012-.552a8.688 8.688 0 0 0 2.137-2.213z"/>
+    </svg>
+  </div>
+</div>
+    </div>
+
+    <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+      <p className="hover:text-white transition-colors duration-300">
+        &copy; 2025 MediKloud. Transforming Healthcare Delivery. | <a href="/privacy-policy" className="text-cyan-400 hover:underline">Privacy Policy</a> | <a href="/terms" className="text-cyan-400 hover:underline">Terms of Service</a>
+      </p>
+    </div>
+  </div>
+</footer>
 
       <style jsx>{`
           .hero-heading {
@@ -1001,7 +1043,7 @@ function App() {
         
         .animate-gradient-x {
           animation: gradient-x 3s ease infinite;
-        }
+           }
         
         .animate-count-up {
           animation: count-up 0.8s ease-out forwards;
@@ -1012,6 +1054,12 @@ function App() {
         }
       `}</style>
     </div>
+        </>
+        }
+      />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfService />} />
+    </Routes>
   );
 }
 
