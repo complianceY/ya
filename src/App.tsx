@@ -552,8 +552,8 @@ function App() {
           >
             <div className="relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-white/50">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Our Delivery Vision</h3>
-                <p className="text-gray-600">From hospital pharmacy to patient - seamlessly</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Seamless Ordering</h3>
+                <p className="text-gray-600">From hospital pharmacy to patient - Beds & Homes</p>
               </div>
               
               <div className="space-y-6">
