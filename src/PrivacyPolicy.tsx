@@ -6,7 +6,7 @@ const Header = () => (
       <div className="flex justify-between items-center h-16">
         <div className="flex items-center space-x-3 group cursor-pointer">
           <img
-            src="/New_Logo_MK.png"
+            src="/MK_Logo_WOB.png"
             alt="MediKloud Logo"
             className="h-9 transition-all duration-500 group-hover:scale-110"
           />
