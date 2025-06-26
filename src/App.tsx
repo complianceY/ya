@@ -885,7 +885,11 @@ function App() {
 
   {/* Optional: Redirect to thank-you page */}
   <input type="hidden" name="_redirect" value="https://medikloud.com/thank-you" />
-
+{formSubmitted && (
+  <p className="text-green-400 text-lg font-semibold">
+    Thanks for submitting the form. We will get in touch with you shortly.
+  </p>
+)}
   <button 
     type="submit" 
     className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group"
