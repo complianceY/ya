@@ -467,27 +467,28 @@ function App() {
                   
                   {/* Enhanced background glow - larger and more visible */}
                   <div 
-  className="absolute inset-0 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 blur-xl opacity-0 group-hover:opacity-40 transition-all duration-700 rounded-lg"
-  style={{
-    transform: `scale(1.1)`,
-    top: '-10%',
-    bottom: '-10%',
-    left: '-20%',
-    right: '-20%'
-  }}
-></div>
+                    className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-cyan-400/20 to-teal-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-lg"
+                    style={{
+                      transform: `scale(${1.3 + Math.sin(glowIntensity * 0.05) * 0.1})`,
+                      top: '-20%',
+                      bottom: '-20%',
+                      left: '-30%',
+                      right: '-30%'
+                    }}
+                  ></div>
                   
                   {/* Larger floating particles around text */}
                   {isHovering && [...Array(8)].map((_, i) => (
                     <div
-    key={i}
-    className="absolute w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-50 animate-bubble-slow"
-    style={{
-      left: `${10 + Math.random() * 80}%`,
-      top: `${10 + Math.random() * 80}%`,
-      animationDelay: `${i * 300}ms`
-    }}
-  ></div>
+                      key={i}
+                      className="absolute w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-70 animate-ping"
+                      style={{
+                        left: `${10 + Math.random() * 80}%`,
+                        top: `${10 + Math.random() * 80}%`,
+                        animationDelay: `${i * 250}ms`,
+                        animationDuration: `${1.8 + Math.random() * 0.7}s`
+                      }}
+                    ></div>
                   ))}
                 </span>
               </div>
@@ -1008,26 +1009,6 @@ function App() {
         
         .animate-blink {
           animation: blink 1s infinite;
-
-        @keyframes bubble-slow {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateY(-10px) scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.7;
-  }
-}
-
-.animate-bubble-slow {
-  animation: bubble-slow 4s ease-in-out infinite;
-}
-          
         }
       `}</style>
     </div>
