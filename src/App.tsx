@@ -950,7 +950,7 @@ function App() {
   <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
   <ul className="space-y-3 text-gray-300 mb-4">
     <li>Email: hello@medikloud.com</li>
-    <li>Phone: +91-9876543210</li>
+    <li>Phone: +91-7702670993</li>
   </ul>
   <div className="flex items-center space-x-4 text-gray-400">
     {/* LinkedIn Icon */}
