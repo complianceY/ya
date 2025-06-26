@@ -906,64 +906,62 @@ function App() {
 
       {/* Advanced Footer */}
       <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-gray-900"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="group">
-              <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src="/MK_Logo_WOB.png" 
-                  alt="MediKloud Logo" 
-                  className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
-                />
-              </div>
-              <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                Revolutionizing healthcare delivery through innovative pharmacy logistics and AI-powered automation.
-              </p>
-            </div>
-            
-            {[
-              {
-                title: "Solutions",
-                links: ["Tech-First Pharmacies", "Virtual Pharmacies", "Home Delivery", "AI Automation"]
-              },
-              {
-                title: "Technology", 
-                links: ["AI Prescription Reading", "Virtual Kiosks", "EHR Integration", "Data Security"]
-              },
-              {
-                title: "Company",
-                links: ["About Us", "Careers", "News", "Contact"]
-              }
-            ].map((section, sectionIndex) => (
-              <div key={section.title}>
-                <h4 className="text-lg font-semibold mb-4 text-cyan-400">{section.title}</h4>
-                <ul className="space-y-3 text-gray-300">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a 
-                        href="#" 
-                        className="hover:text-white transition-all duration-300 hover:translate-x-2 inline-block relative group"
-                        style={{ animationDelay: `${(sectionIndex * 4 + linkIndex) * 100}ms` }}
-                      >
-                        {link}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p className="hover:text-white transition-colors duration-300">
-              &copy; 2025 MediKloud. Transforming Healthcare Delivery. | Privacy Policy | Terms of Service
-            </p>
-          </div>
+  <div className="absolute inset-0 bg-gradient-to-t from-black to-gray-900"></div>
+  
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-4 gap-8">
+      <div className="group">
+        <div className="flex items-center space-x-3 mb-6">
+          <img 
+            src="/MK_Logo_WOB.png" 
+            alt="MediKloud Logo" 
+            className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
+          />
         </div>
-      </footer>
+        <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+          Revolutionizing healthcare delivery through innovative pharmacy logistics and AI-powered automation.
+        </p>
+      </div>
+
+      {/* Solutions */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4 text-cyan-400">Solutions</h4>
+        <ul className="space-y-3 text-gray-300">
+          <li>Tech-First Pharmacies</li>
+          <li>Virtual Pharmacies</li>
+          <li>Home Delivery</li>
+          <li>AI Automation</li>
+        </ul>
+      </div>
+
+      {/* Technology */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4 text-cyan-400">Technology</h4>
+        <ul className="space-y-3 text-gray-300">
+          <li>AI Prescription Reading</li>
+          <li>Virtual Kiosks</li>
+          <li>EHR Integration</li>
+          <li>Data Security</li>
+        </ul>
+      </div>
+
+      {/* Contact Info or Leave Blank */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4 text-cyan-400">Contact</h4>
+        <ul className="space-y-3 text-gray-300">
+          <li>Email: hello@medikloud.com</li>
+          <li>Phone: +91-9876543210</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+      <p className="hover:text-white transition-colors duration-300">
+        &copy; 2025 MediKloud. Transforming Healthcare Delivery. | Privacy Policy | Terms of Service
+      </p>
+    </div>
+  </div>
+</footer>
 
       <style jsx>{`
           .hero-heading {
