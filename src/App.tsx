@@ -303,10 +303,10 @@ function App() {
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
                 <img 
-                  src="/New_Logo_MK.png" 
-                  alt="MediKloud Logo" 
-                  className={`${scrollY > 50 ? 'h-8' : 'h-10'}`} 
-                />
+  src="/MK_Logo_WOB.png" 
+  alt="MediKloud Logo" 
+  style={{ height: '80px', width: 'auto' }} 
+/>
               </div>
             </div>
             
@@ -887,7 +887,7 @@ function App() {
                 <img 
                   src="/MK_Logo_WOB.png" 
                   alt="MediKloud Logo" 
-                  className="h-1 w-auto" 
+                  className="h-10 w-auto" 
                 />
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
