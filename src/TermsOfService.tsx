@@ -183,7 +183,52 @@ const TermsOfService = () => (
             <p>We may adjust fees and will notify you in accordance with applicable law.</p>
           </Section>
           <Section title="8. Return/Refunds Policy">
-            <p>All sales are final. No refunds will be issued.</p>
+            <h3 className="font-semibold">Return Policy</h3>
+            <p>Thank you for your purchase. We hope you are happy with your order. However, if you are not completely satisfied for any reason, you may return the item to us for a refund, store credit, or exchange. Please review the guidelines below for more details on our return process.</p>
+            <h4 className="font-semibold mt-4">Returns</h4>
+            <ul>
+              <li>All returns must be postmarked within two (2) days of the purchase date.</li>
+              <li>Returned items must be in new and unused condition, with all original tags, labels, and packaging intact.</li>
+            </ul>
+            <h4 className="font-semibold mt-4">Return Process</h4>
+            <p>To initiate a return, please email our customer service team at <a href="mailto:hello@medikloud.com" className="text-blue-600 underline">hello@medikloud.com</a> to obtain a Return Merchandise Authorization (RMA) number.</p>
+            <p>After receiving your RMA number:</p>
+            <ol className="list-decimal pl-6">
+              <li>Place the item securely in its original packaging.</li>
+              <li>Include proof of purchase and the RMA number.</li>
+              <li>Ship the return to the following address:</li>
+            </ol>
+            <address className="not-italic my-4">
+              Medikloud<br/>
+              Attn: Returns<br/>
+              RMA #<br/>
+              Startup Village, Chandrampalem,<br/>
+              Pedda Rushikonda, Madhurawada,<br/>
+              Visakhapatnam, Andhra Pradesh – 530048<br/>
+              India
+            </address>
+            <ul>
+              <li>Please note: You are responsible for all return shipping charges.</li>
+              <li>We strongly recommend using a trackable shipping method.</li>
+            </ul>
+            <h4 className="font-semibold mt-4">Refunds</h4>
+            <p>After we receive and inspect your returned item, we will process your refund or exchange. Please allow up to two (2) business days from receipt of the return for processing.</p>
+            <ul>
+              <li>Refunds may take 1–2 billing cycles to appear on your credit card statement, depending on your payment provider.</li>
+              <li>You will receive an email confirmation once your return has been processed.</li>
+            </ul>
+            <h4 className="font-semibold mt-4">Exceptions</h4>
+            <p>The following items cannot be returned or exchanged:</p>
+            <ul>
+              <li>Any item explicitly marked as non-returnable on the product information page.</li>
+            </ul>
+            <p>If you receive a defective or damaged item, please contact us immediately at the email or phone number below to arrange a refund or replacement.</p>
+            <h4 className="font-semibold mt-4">Questions</h4>
+            <p>If you have any questions or need further assistance regarding our return policy, please contact us:</p>
+            <ul>
+              <li>📞 +91 77026 70993</li>
+              <li>📧 <a href="mailto:hello@medikloud.com" className="text-blue-600 underline">hello@medikloud.com</a></li>
+            </ul>
           </Section>
           <Section title="9. Software">
             <p>Software provided may come with an End User License Agreement (EULA). If not:</p>
