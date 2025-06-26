@@ -888,7 +888,7 @@ function App() {
                 <img 
                   src="/MK_Logo_WOB.png" 
                   alt="MediKloud Logo" 
-                  className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
+                  className="h-16 w-auto" 
                 />
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
