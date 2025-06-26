@@ -882,7 +882,7 @@ function App() {
             <div className="group">
               <div className="flex items-center space-x-3 mb-6">
                 <img 
-                  src="/New_Logo_MK.png" 
+                  src="/MK_Logo_WOB.png" 
                   alt="MediKloud Logo" 
                   className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
                 />
