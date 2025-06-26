@@ -832,46 +832,56 @@ function App() {
                 isVisible.contact ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
               }`}
             >
-              <form className="space-y-6">
-                {[
-  { id: "yourName", label: "Your Name", type: "text", placeholder: "Enter your name", required: true },
-  { id: "phone", label: "Phone Number", type: "tel", placeholder: "Enter your phone number", required: true },
-  { id: "company", label: "Company/Hospital Name", type: "text", placeholder: "Enter your organization name", required: true }
-].map((field, index) => (
-                  <div key={field.id} style={{ animationDelay: `${index * 150}ms` }}>
-                    <label htmlFor={field.id} className="block text-sm font-medium text-white mb-2">
-                      {field.label} <span className="text-red-500">*</span>
-                    </label>
-                    <input 
-                      type={field.type} 
-                      id={field.id} 
-                      className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
-                      placeholder={field.placeholder}
-                    />
-                  </div>
-                ))}
-                
-                <div style={{ animationDelay: '450ms' }}>
-                  <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                    Your Message
-                  </label>
-                  <textarea 
-                    id="message" 
-                    rows={4} 
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group"
-                  style={{ animationDelay: '600ms' }}
-                >
-                  <span className="relative z-10">Let's talk</span>
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                </button>
-              </form>
+              <form 
+  action="https://formspree.io/f/xrbkovkg" 
+  method="POST" 
+  className="space-y-6"
+>
+  {[
+    { id: "yourName", label: "Your Name", type: "text", name: "name", placeholder: "Enter your name", required: true },
+    { id: "phone", label: "Phone Number", type: "tel", name: "phone", placeholder: "Enter your phone number", required: true },
+    { id: "company", label: "Company/Hospital Name", type: "text", name: "company", placeholder: "Enter your organization name", required: true }
+  ].map((field, index) => (
+    <div key={field.id} style={{ animationDelay: `${index * 150}ms` }}>
+      <label htmlFor={field.id} className="block text-sm font-medium text-white mb-2">
+        {field.label} <span className="text-red-500">*</span>
+      </label>
+      <input 
+        type={field.type} 
+        id={field.id} 
+        name={field.name}
+        required={field.required}
+        className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
+        placeholder={field.placeholder}
+      />
+    </div>
+  ))}
+
+  <div style={{ animationDelay: '450ms' }}>
+    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+      Your Message
+    </label>
+    <textarea 
+      id="message" 
+      name="message"
+      rows={4} 
+      className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 hover:bg-white/20 backdrop-blur-sm"
+      placeholder="How can we help you?"
+    ></textarea>
+  </div>
+
+  {/* Optional: Redirect to thank-you page */}
+  <input type="hidden" name="_redirect" value="https://medikloud.com/thank-you" />
+
+  <button 
+    type="submit" 
+    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group"
+    style={{ animationDelay: '600ms' }}
+  >
+    <span className="relative z-10">Let's talk</span>
+    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+  </button>
+</form>
             </div>
           </div>
         </div>
