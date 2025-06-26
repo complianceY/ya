@@ -833,8 +833,21 @@ function App() {
               }`}
             >
               <form 
-  action="https://formspree.io/f/xrbkovkg" 
-  method="POST" 
+  onSubmit={async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const response = await fetch("https://formspree.io/f/xrbkovkg", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    if (response.ok) {
+      setFormSubmitted(true);
+      e.target.reset(); // optional: clear form
+    }
+  }}
   className="space-y-6"
 >
   {[
