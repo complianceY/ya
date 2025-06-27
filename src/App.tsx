@@ -299,7 +299,7 @@ function App() {
       {/* Logo */}
       <div className="flex-shrink-0">
         <img
-  src="/MK_Logo_WOB.png"
+  src="/CG_MK_Logo.png"
   alt="MediKloud Logo"
   className="h-12 sm:h-14 md:h-16 w-auto max-w-[200px]"
 />
@@ -889,7 +889,7 @@ function App() {
       <div className="group">
         <div className="flex items-center space-x-3 mb-6">
           <img 
-            src="/MK_Logo_WOB.png" 
+            src="/CG_MK_Logo.png" 
             alt="MediKloud Logo" 
             className="h-8 w-auto group-hover:scale-110 transition-transform duration-700" 
           />
