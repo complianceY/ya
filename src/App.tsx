@@ -293,113 +293,63 @@ function App() {
       </div>
 
       {/* Advanced Navigation */}
-      <nav 
-        className="fixed top-0 w-full z-50 transition-all duration-700 ease-out"
-        style={{
-          backgroundColor: scrollY > 50 ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.8)',
-          backdropFilter: 'blur(20px) saturate(180%)',
-          borderBottom: scrollY > 50 ? '1px solid rgba(229, 231, 235, 0.5)' : 'none',
-          transform: `translateY(${scrollY > 100 ? '-2px' : '0px'}) scale(${scrollY > 50 ? '0.9' : '1'})`,
-          borderRadius: scrollY > 50 ? '20px' : '0px',
-          boxShadow: scrollY > 50 ? '0 25px 50px rgba(0, 0, 0, 0.15)' : 'none'
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-3 group cursor-pointer">
-              <div className="relative">
-                <img 
-                  src="/MK_Logo_WOB.png" 
-                  alt="MediKloud Logo" 
-                  className={`transition-all duration-500 ${scrollY > 50 ? 'h-14' : 'h-16'}`} 
-                />
-              </div>
-            </div>
-            
-            {/* Desktop Navigation with Professional Menu Items */}
-            <div className={`hidden md:flex items-center transition-all duration-500 ${scrollY > 50 ? 'space-x-6' : 'space-x-8'}`}>
-  {[
-    { name: 'Solutions', icon: Building2, target: 'delivery' },
-    { name: 'Services', icon: Layers, target: 'Services' },
-  ].map((item, index) => (
-    <button 
-      key={item.name}
-      onClick={() => scrollToSection(item.target)}
-      className={`text-sm md:text-base font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200`}
+      <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      {/* Logo */}
+      <div className="flex-shrink-0">
+        <img src="/MK_Logo_WOB.png" alt="MediKloud Logo" className="h-10" />
+      </div>
 
-      style={{ animationDelay: `${index * 100}ms` }}
-    >
-      {/* Icon */}
-      <item.icon className="h-5 w-5 z-10 text-blue-600 group-hover:text-white transition duration-300" />
-
-      {/* Text */}
-      <span className="z-10 font-semibold">{item.name}</span>
-
-      {/* Subtle glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl blur-sm"></div>
-    </button>
-  ))}
-
-  {/* Contact Us button (enhanced styling) */}
-  <button 
-    onClick={() => scrollToSection('contact')}
-    className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-2xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center transform hover:scale-105 border border-blue-500"
-  >
-    <span className="relative z-10 transition-transform duration-300 group-hover:scale-105 font-semibold text-lg">Contact Us</span>
-    <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 animate-pulse rounded-2xl"></div>
-  </button>
-</div>
-
-            {/* Advanced Mobile Menu Button */}
-            <button 
-              className="md:hidden relative w-10 h-10 transition-transform duration-300 hover:scale-110"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Menu 
-                  className={`absolute transition-all duration-500 ${isMenuOpen ? 'rotate-180 opacity-0 scale-50' : 'rotate-0 opacity-100 scale-100'}`} 
-                />
-                <X 
-                  className={`absolute transition-all duration-500 ${isMenuOpen ? 'rotate-0 opacity-100 scale-100' : '-rotate-180 opacity-0 scale-50'}`} 
-                />
-              </div>
-            </button>
-          </div>
-        </div>
-
-        {/* Advanced Mobile Navigation */}
-        <div 
-          className={`md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 transition-all duration-700 ease-out ${
-            isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
-          } overflow-hidden`}
+      {/* Navigation Items */}
+      <div className="hidden md:flex space-x-8">
+        <button
+          onClick={() => scrollToSection('delivery')}
+          className="text-gray-800 text-sm font-medium hover:text-blue-600 transition-colors"
         >
-          <div className="px-4 py-2 space-y-1">
-            {[
-              { name: 'Solutions', icon: Building2, target: 'delivery' },
-              { name: 'Services', icon: Layers, target: 'Services' },
-              { name: 'Technology', icon: Bot, target: 'stats' },
-              { name: 'About', icon: Info, target: 'hero' },
-              { name: 'Contact Us', icon: Phone, target: 'contact' }
-            ].map((item, index) => (
-              <button 
-                key={item.name}
-                onClick={() => scrollToSection(item.target)}
-                className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 rounded-xl transition-all duration-500 transform hover:scale-105 w-full text-left"
-                style={{ 
-                  animationDelay: `${index * 100}ms`,
-                  transform: isMenuOpen ? 'translateX(0) scale(1)' : 'translateX(-20px) scale(0.95)',
-                  opacity: isMenuOpen ? 1 : 0,
-                  transition: `all 0.5s ease-out ${index * 100}ms`
-                }}
-              >
-                <item.icon className="h-4 w-4" />
-                <span>{item.name}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
+          Solutions
+        </button>
+        <button
+          onClick={() => scrollToSection('Services')}
+          className="text-gray-800 text-sm font-medium hover:text-blue-600 transition-colors"
+        >
+          Services
+        </button>
+        <button
+          onClick={() => scrollToSection('contact')}
+          className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors"
+        >
+          Contact Us
+        </button>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden">
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800">
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  {isMenuOpen && (
+    <div className="md:hidden bg-white border-t border-gray-200">
+      <div className="px-4 py-2 space-y-2">
+        <button onClick={() => scrollToSection('delivery')} className="block w-full text-left text-gray-700 py-2">
+          Solutions
+        </button>
+        <button onClick={() => scrollToSection('Services')} className="block w-full text-left text-gray-700 py-2">
+          Services
+        </button>
+        <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-blue-600 py-2 font-medium">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  )}
+</nav>
+
 
       {/* Hero Section with Fixed Text Layout */}
       <section ref={heroRef} className="relative pt-28 pb-20 min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-cyan-50">
