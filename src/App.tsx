@@ -301,7 +301,7 @@ function App() {
         <img src="/MK_Logo_WOB.png" alt="MediKloud Logo" className="h-10" />
       </div>
 
-      {/* Navigation Items */}
+      {/* Navigation Links */}
       <div className="hidden md:flex space-x-8 items-center">
         <button
           onClick={() => scrollToSection('delivery')}
@@ -316,20 +316,20 @@ function App() {
           Services
         </button>
 
-        {/* Contact Us Button (with animation and gradient effect) */}
-        <button
+        {/* Contact Us Button (restored animation version) */}
+        <button 
           onClick={() => scrollToSection('contact')}
-          className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-xl overflow-hidden group transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20"
+          className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-2xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center"
         >
-          <span className="relative z-10 font-semibold text-sm">Contact Us</span>
-          {/* Animated gradient layer on hover */}
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-          {/* Subtle white glow effect on hover */}
-          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
+          <span className="relative z-10 transition-transform duration-300 group-hover:scale-105 font-semibold text-sm">
+            Contact Us
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 animate-pulse rounded-2xl"></div>
         </button>
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile toggle */}
       <div className="md:hidden">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800">
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -355,6 +355,7 @@ function App() {
     </div>
   )}
 </nav>
+
 
 
 
