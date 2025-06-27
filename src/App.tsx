@@ -316,17 +316,20 @@ function App() {
           Services
         </button>
 
-        {/* 🔴 Contact Us Button with Blink */}
+        {/* Contact Us Button (with animation and gradient effect) */}
         <button
           onClick={() => scrollToSection('contact')}
-          className="relative text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors animate-blink"
+          className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-xl overflow-hidden group transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20"
         >
-          Contact Us
-          <span className="absolute inset-0 rounded-lg bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></span>
+          <span className="relative z-10 font-semibold text-sm">Contact Us</span>
+          {/* Animated gradient layer on hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+          {/* Subtle white glow effect on hover */}
+          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
         </button>
       </div>
 
-      {/* Mobile Menu Toggle */}
+      {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800">
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -335,7 +338,7 @@ function App() {
     </div>
   </div>
 
-  {/* Mobile Navigation Dropdown */}
+  {/* Mobile Menu */}
   {isMenuOpen && (
     <div className="md:hidden bg-white border-t border-gray-200">
       <div className="px-4 py-2 space-y-2">
@@ -345,13 +348,14 @@ function App() {
         <button onClick={() => scrollToSection('Services')} className="block w-full text-left text-gray-700 py-2">
           Services
         </button>
-        <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-blue-600 py-2 font-medium animate-blink">
+        <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-blue-600 py-2 font-medium">
           Contact Us
         </button>
       </div>
     </div>
   )}
 </nav>
+
 
 
 
