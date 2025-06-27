@@ -303,9 +303,6 @@ function App() {
   alt="MediKloud Logo"
   className="h-12 sm:h-14 md:h-16 w-auto max-w-[200px]"
 />
-
-
-
       </div>
 
       {/* Navigation Links */}
