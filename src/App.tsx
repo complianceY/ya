@@ -4,51 +4,68 @@ import {
   Bot, 
   Building2, 
   CreditCard, 
-  FileText, 
-  Clock, 
+  FileText,  
   Shield, 
-  Headphones,
-  ChevronRight,
   Menu,
   X,
-  Star,
   CheckCircle,
   ArrowRight,
-  Pill,
   Activity,
-  Users,
   Zap,
-  Heart,
   TrendingUp,
-  Globe,
   Package,
-  MapPin,
   Timer,
   Smartphone,
-  ShoppingCart,
   Layers,
   Home,
   Bed,
-  Settings,
-  Info,
-  Phone,
-  Award
 } from 'lucide-react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PrivacyPolicy from './PrivacyPolicy'; // Adjust the path if needed
 import TermsOfService from './TermsOfService';
-import ReturnPolicy from './ReturnPolicy';
 
 function App() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState({});
+  const [isVisible, setIsVisible] = useState<{
+  hero: boolean;
+  stats: boolean;
+  delivery: boolean;
+  Services: boolean;
+  contact: boolean;
+  about: boolean;
+  privacy: boolean;
+  terms: boolean;
+  returnPolicy: boolean;
+  [key: string]: boolean;
+}>({
+  hero: false,
+  stats: false,
+  delivery: false,
+  Services: false,
+  contact: false,
+  about: false,
+  privacy: false,
+  terms: false,
+  returnPolicy: false,
+});
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [typewriterText, setTypewriterText] = useState('');
   const [isHovering, setIsHovering] = useState(false);
   const [glowIntensity, setGlowIntensity] = useState(0);
   const heroRef = useRef(null);
-  const particlesRef = useRef([]);const [formSubmitted, setFormSubmitted] = useState(false);
+  type Particle = {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  opacity: number;
+};
+
+const particlesRef = useRef<Particle[]>([]);
 
   // Enhanced typewriter effect with multiple phases
   useEffect(() => {
@@ -77,7 +94,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     
@@ -128,7 +145,7 @@ function App() {
   }, []);
 
   // Smooth scroll function
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ 
@@ -303,6 +320,9 @@ function App() {
   alt="MediKloud Logo"
   className="h-12 sm:h-14 md:h-16 w-auto max-w-[200px]"
 />
+
+
+
       </div>
 
       {/* Navigation Links */}
@@ -808,7 +828,8 @@ function App() {
               <form 
   onSubmit={async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
+    const form = e.target as HTMLFormElement;
+const formData = new FormData(form);
     const response = await fetch("https://formspree.io/f/xrbkovkg", {
       method: "POST",
       body: formData,
@@ -818,7 +839,7 @@ function App() {
     });
     if (response.ok) {
       setFormSubmitted(true);
-      e.target.reset(); // optional: clear form
+      form.reset(); // optional: clear form
     }
   }}
   className="space-y-6"
@@ -947,7 +968,7 @@ function App() {
   </div>
 </footer>
 
-      <style jsx>{`
+      <style>{`
           .hero-heading {
             line-height: 1.2;
           }
@@ -1031,5 +1052,3 @@ function App() {
 }
 
 export default App;
-
-
