@@ -305,20 +305,19 @@ function App() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
                 <img 
                   src="/MK_Logo_WOB.png" 
                   alt="MediKloud Logo" 
-                  className={`transition-all duration-500 group-hover:scale-125 ${scrollY > 50 ? 'h-10' : 'h-12'}`} 
+                  className={`transition-all duration-500 ${scrollY > 50 ? 'h-14' : 'h-16'}`} 
                 />
-                <div className="absolute inset-0 bg-blue-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
               </div>
             </div>
             
             {/* Desktop Navigation with Professional Menu Items */}
-            <div className={`hidden md:flex items-center transition-all duration-500 ${scrollY > 50 ? 'space-x-4' : 'space-x-8'}`}>
+            <div className={`hidden md:flex items-center transition-all duration-500 ${scrollY > 50 ? 'space-x-6' : 'space-x-8'}`}>
   {[
     { name: 'Solutions', icon: Building2, target: 'delivery' },
     { name: 'Services', icon: Layers, target: 'Services' },
@@ -326,29 +325,29 @@ function App() {
     <button 
       key={item.name}
       onClick={() => scrollToSection(item.target)}
-      className={`group relative px-4 py-2 rounded-full overflow-hidden flex items-center space-x-2 transition-all duration-300
-                  ${scrollY > 50 ? 'text-sm' : 'text-base'} text-gray-700 hover:text-white`}
+      className={`group relative px-6 py-3 rounded-2xl overflow-hidden flex items-center space-x-3 transition-all duration-500 transform hover:scale-105
+                  ${scrollY > 50 ? 'text-base' : 'text-lg'} text-gray-700 hover:text-white bg-gradient-to-r from-blue-50 to-cyan-50 hover:from-blue-600 hover:to-cyan-600 border border-blue-100 hover:border-transparent shadow-lg hover:shadow-xl`}
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      {/* Gradient background on hover */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-
       {/* Icon */}
-      <item.icon className="h-4 w-4 z-10 text-blue-600 group-hover:text-white transition duration-300" />
+      <item.icon className="h-5 w-5 z-10 text-blue-600 group-hover:text-white transition duration-300" />
 
       {/* Text */}
-      <span className="z-10 font-medium">{item.name}</span>
+      <span className="z-10 font-semibold">{item.name}</span>
+
+      {/* Subtle glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl blur-sm"></div>
     </button>
   ))}
 
-  {/* Contact Us button (unchanged) */}
+  {/* Contact Us button (enhanced styling) */}
   <button 
     onClick={() => scrollToSection('contact')}
-    className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-full overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center"
+    className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-2xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center transform hover:scale-105 border border-blue-500"
   >
-    <span className="relative z-10 transition-transform duration-300 group-hover:scale-105">Contact Us</span>
-    <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
-    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse rounded-full"></div>
+    <span className="relative z-10 transition-transform duration-300 group-hover:scale-105 font-semibold text-lg">Contact Us</span>
+    <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 animate-pulse rounded-2xl"></div>
   </button>
 </div>
 
@@ -403,7 +402,7 @@ function App() {
       </nav>
 
       {/* Hero Section with Fixed Text Layout */}
-      <section ref={heroRef} className="relative pt-24 pb-20 min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <section ref={heroRef} className="relative pt-28 pb-20 min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-cyan-50">
         {/* Morphing Background Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <div 
@@ -514,7 +513,7 @@ function App() {
   style={{ animationDelay: '0.8s' }}
 >
   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 font-semibold">
-  We’re building the future of hospital pharmacies.
+  We're building the future of hospital pharmacies.
 </span>
   <span className="block text-gray-600 hover:text-gray-700">
     From enabling online deliveries to setting up tech-first in-hospital pharmacies and smart ordering kiosks — we help hospitals operate their pharmacies smarter, faster, and more efficiently.
