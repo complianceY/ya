@@ -302,7 +302,7 @@ function App() {
       </div>
 
       {/* Navigation Items */}
-      <div className="hidden md:flex space-x-8">
+      <div className="hidden md:flex space-x-8 items-center">
         <button
           onClick={() => scrollToSection('delivery')}
           className="text-gray-800 text-sm font-medium hover:text-blue-600 transition-colors"
@@ -315,15 +315,18 @@ function App() {
         >
           Services
         </button>
+
+        {/* 🔴 Contact Us Button with Blink */}
         <button
           onClick={() => scrollToSection('contact')}
-          className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors"
+          className="relative text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors animate-blink"
         >
           Contact Us
+          <span className="absolute inset-0 rounded-lg bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></span>
         </button>
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Toggle */}
       <div className="md:hidden">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800">
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -332,7 +335,7 @@ function App() {
     </div>
   </div>
 
-  {/* Mobile Menu */}
+  {/* Mobile Navigation Dropdown */}
   {isMenuOpen && (
     <div className="md:hidden bg-white border-t border-gray-200">
       <div className="px-4 py-2 space-y-2">
@@ -342,13 +345,14 @@ function App() {
         <button onClick={() => scrollToSection('Services')} className="block w-full text-left text-gray-700 py-2">
           Services
         </button>
-        <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-blue-600 py-2 font-medium">
+        <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-blue-600 py-2 font-medium animate-blink">
           Contact Us
         </button>
       </div>
     </div>
   )}
 </nav>
+
 
 
       {/* Hero Section with Fixed Text Layout */}
