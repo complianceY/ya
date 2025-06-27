@@ -318,15 +318,20 @@ function App() {
 
         {/* Contact Us Button (restored animation version) */}
         <button 
-          onClick={() => scrollToSection('contact')}
-          className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-2xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center"
-        >
-          <span className="relative z-10 transition-transform duration-300 group-hover:scale-105 font-semibold text-sm">
-            Contact Us
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 animate-pulse rounded-2xl"></div>
-        </button>
+  onClick={() => scrollToSection('contact')}
+  className="relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-xl overflow-hidden group transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20 flex items-center justify-center"
+>
+  <span className="relative z-10 transition-transform duration-300 group-hover:scale-105 font-semibold text-sm">
+    Contact Us
+  </span>
+
+  {/* Animated gradient on hover */}
+  <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+
+  {/* Subtle pulse effect */}
+  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 animate-pulse rounded-xl"></div>
+</button>
+
       </div>
 
       {/* Mobile toggle */}
