@@ -325,8 +325,8 @@ function App() {
     <button 
       key={item.name}
       onClick={() => scrollToSection(item.target)}
-      className={`group relative px-4 py-2 text-sm font-semibold rounded-md transition-colors duration-300
-${scrollY > 50 ? 'text-base' : 'text-lg'} text-gray-700 hover:text-blue-600 hover:bg-gray-100`}
+      className={`text-sm md:text-base font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200`}
+
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Icon */}
