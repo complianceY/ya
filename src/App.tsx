@@ -298,7 +298,8 @@ function App() {
     <div className="flex justify-between items-center h-16">
       {/* Logo */}
       <div className="flex-shrink-0">
-        <img src="/MK_Logo_WOB.png" alt="MediKloud Logo" className="h-10" />
+        <img src="/MK_Logo_WOB.png" alt="MediKloud Logo" className="h-12 sm:h-14 md:h-16" />
+
       </div>
 
       {/* Navigation Links */}
